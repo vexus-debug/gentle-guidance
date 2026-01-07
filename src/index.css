@@ -2,95 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Flawless Med Spa Design System
+   Luxury feminine aesthetic with warm taupe/rose tones
+   All colors in HSL format
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cream/off-white background */
+    --background: 40 33% 97%;
+    --foreground: 25 25% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Cards with subtle warmth */
+    --card: 40 30% 98%;
+    --card-foreground: 25 25% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 30% 98%;
+    --popover-foreground: 25 25% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Warm taupe/rose - the signature spa color */
+    --primary: 25 30% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Chocolate brown - rich accent */
+    --secondary: 25 35% 25%;
+    --secondary-foreground: 40 30% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Soft cream for subtle backgrounds */
+    --muted: 35 25% 92%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Dusty rose highlight */
+    --accent: 20 35% 70%;
+    --accent-foreground: 25 35% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 25 30% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom spa colors */
+    --spa-cream: 40 33% 97%;
+    --spa-taupe: 25 30% 60%;
+    --spa-rose: 20 35% 70%;
+    --spa-chocolate: 25 35% 25%;
+    --spa-gold: 38 60% 55%;
+    --spa-beige: 35 30% 88%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 25 25% 10%;
+    --foreground: 40 30% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 25% 12%;
+    --card-foreground: 40 30% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 25% 12%;
+    --popover-foreground: 40 30% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 30% 65%;
+    --primary-foreground: 25 25% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 35 25% 80%;
+    --secondary-foreground: 25 25% 10%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 20 35% 70%;
+    --accent-foreground: 25 25% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 25 30% 65%;
   }
 }
 
@@ -100,6 +91,84 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-normal tracking-wide;
+  }
+}
+
+@layer components {
+  /* Elegant subheading style */
+  .subheading {
+    @apply text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Luxury button style */
+  .btn-luxury {
+    @apply bg-secondary text-secondary-foreground px-8 py-4 text-sm uppercase tracking-[0.2em] font-medium transition-all duration-300 hover:opacity-90;
+  }
+
+  /* Gold accent text */
+  .text-gold {
+    color: hsl(var(--spa-gold));
+  }
+
+  /* Overlay for hero images */
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40;
+  }
+
+  /* Elegant divider */
+  .divider-elegant {
+    @apply w-16 h-px bg-primary mx-auto my-6;
+  }
+
+  /* Card with luxury feel */
+  .card-luxury {
+    @apply bg-card border-0 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+}
+
+@layer utilities {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Fade in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide up animation */
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
