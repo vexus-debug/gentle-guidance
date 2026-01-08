@@ -145,6 +145,7 @@ const Header = () => {
         isOpen={mobileNavOpen}
         onClose={() => setMobileNavOpen(false)}
         navLinks={navLinks}
+        serviceSubLinks={serviceSubLinks}
       />
     </>
   );
