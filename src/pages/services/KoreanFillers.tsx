@@ -2,9 +2,16 @@ import { Droplet, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 
+import fillerLipInjection from "@/assets/filler-lip-injection.jpg";
+import fillerCheekVolumization from "@/assets/filler-cheek-volumization.jpg";
+import fillerJawlineContouring from "@/assets/filler-jawline-contouring.jpg";
+import fillerFacialInjection from "@/assets/filler-facial-injection.jpg";
+import fillerGentleTreatment from "@/assets/filler-gentle-treatment.jpg";
+
 const treatments = [
   {
     name: "Revolax",
+    image: fillerLipInjection,
     overview: "Revolax is a premium Korean hyaluronic acid dermal filler celebrated for its exceptionally smooth consistency and natural tissue integration. Available in multiple densities, Revolax provides versatile solutions from fine line correction to deep volume restoration, delivering natural-looking results that move with your expressions.",
     howItWorks: "Revolax features high-purity, cross-linked hyaluronic acid that integrates seamlessly with surrounding tissue. The unique cross-linking technology creates a cohesive gel that resists breakdown while remaining soft and pliable. When injected, it attracts water molecules, providing both immediate volumization and ongoing hydration to treated areas.",
     benefits: [
@@ -21,6 +28,7 @@ const treatments = [
   },
   {
     name: "Neuramis",
+    image: fillerCheekVolumization,
     overview: "Neuramis is a leading Korean dermal filler known for its excellent volumizing properties and impressive longevity. Manufactured using advanced technology, Neuramis offers a range of formulations designed to address everything from subtle lip enhancement to significant facial volume restoration.",
     howItWorks: "Neuramis utilizes high-concentration, cross-linked hyaluronic acid with optimized viscoelastic properties. The specialized cross-linking creates a stable gel matrix that resists enzymatic degradation while maintaining flexibility. This results in natural-feeling volume that lifts, contours, and rejuvenates treated areas.",
     benefits: [
@@ -37,6 +45,7 @@ const treatments = [
   },
   {
     name: "Elravie Premier",
+    image: fillerJawlineContouring,
     overview: "Elravie Premier represents the pinnacle of Korean filler technology, offering high-density formulations specifically designed for deep tissue volumization and facial contouring. This premium filler provides structural support and significant lift, making it ideal for sculpting and defining facial features.",
     howItWorks: "Elravie Premier features exceptionally high-molecular-weight hyaluronic acid with robust cross-linking for maximum structural integrity. The dense, cohesive gel provides substantial lifting power while maintaining a natural feel. Its high G' (elasticity) allows it to resist compression, providing lasting volumization in areas like cheeks and chin.",
     benefits: [
@@ -53,6 +62,7 @@ const treatments = [
   },
   {
     name: "Dermalax",
+    image: fillerFacialInjection,
     overview: "Dermalax offers a versatile range of Korean dermal fillers suitable for everything from delicate fine line treatment to substantial volume restoration. Known for excellent moldability and natural results, Dermalax allows practitioners to create customized treatment plans addressing multiple concerns in a single session.",
     howItWorks: "Dermalax employs advanced cross-linking technology to create hyaluronic acid gels with varying densities and viscosities. Lighter formulations flow easily for superficial wrinkle filling, while denser versions provide structure for volumization. All formulations integrate well with tissue for natural-looking, natural-feeling results.",
     benefits: [
@@ -69,6 +79,7 @@ const treatments = [
   },
   {
     name: "Rejuvenesse",
+    image: fillerGentleTreatment,
     overview: "Rejuvenesse is a sophisticated Korean filler designed for those seeking soft, natural enhancement with minimal post-treatment effects. Its biocompatible formulation provides gentle volumization and hydration while causing notably less swelling than many alternatives, making it popular for patients who can't afford visible downtime.",
     howItWorks: "Rejuvenesse features optimally cross-linked hyaluronic acid designed for maximum biocompatibility. The molecular structure minimizes inflammatory response while still providing effective volumization. The softer gel consistency integrates seamlessly with tissue, creating imperceptible enhancement.",
     benefits: [
@@ -138,12 +149,20 @@ const KoreanFillers = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
             {treatments.map((treatment, index) => (
-              <div key={index} className="glass-card p-6 md:p-10">
-                <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
-                  {treatment.name}
-                </h3>
+              <div key={index} className="glass-card overflow-hidden">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img 
+                    src={treatment.image} 
+                    alt={`${treatment.name} treatment procedure`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:p-10">
+                  <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
+                    {treatment.name}
+                  </h3>
                 
-                <div className="space-y-6 text-muted-foreground">
+                  <div className="space-y-6 text-muted-foreground">
                   <div>
                     <h4 className="font-medium text-secondary mb-2">Overview</h4>
                     <p className="leading-relaxed">{treatment.overview}</p>
@@ -180,18 +199,19 @@ const KoreanFillers = () => {
                     <h4 className="font-medium text-secondary mb-2">Recovery & Results</h4>
                     <p className="leading-relaxed">{treatment.recovery}</p>
                   </div>
-                </div>
+                  </div>
                 
-                <div className="mt-8 pt-6 border-t border-border">
-                  <a
-                    href={`${whatsappBase}${encodeURIComponent(`Hello, I would like to book an appointment for ${treatment.name}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-luxury inline-flex items-center gap-2"
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    Book {treatment.name}
-                  </a>
+                  <div className="mt-8 pt-6 border-t border-border">
+                    <a
+                      href={`${whatsappBase}${encodeURIComponent(`Hello, I would like to book an appointment for ${treatment.name}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-luxury inline-flex items-center gap-2"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      Book {treatment.name}
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
