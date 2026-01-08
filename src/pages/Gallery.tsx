@@ -105,6 +105,7 @@ const Gallery = () => {
           }}
         />
         <div className="hero-overlay" />
+        <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 text-center text-white px-4">
           <p className="subheading text-white/80 mb-4">The Art of Subtlety</p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-wide">
@@ -114,11 +115,12 @@ const Gallery = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 glossy-surface">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-6">
             Visual Stories of Transformation
           </h2>
+          <div className="divider-elegant" />
           <p className="text-muted-foreground leading-relaxed">
             Explore our gallery showcasing the artistry and results of our
             treatments. Every image tells a story of confidence restored and
@@ -128,7 +130,7 @@ const Gallery = () => {
       </section>
 
       {/* Filter & Gallery */}
-      <section className="py-8 md:py-16 bg-muted">
+      <section className="py-8 md:py-16 bg-muted oily-sheen">
         <div className="container mx-auto px-4">
           {/* Category Filters */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
@@ -137,10 +139,10 @@ const Gallery = () => {
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={cn(
-                  "px-6 py-2 text-sm uppercase tracking-[0.15em] transition-all duration-300",
+                  "px-6 py-2 text-sm uppercase tracking-[0.15em] transition-all duration-500 relative overflow-hidden",
                   selectedCategory === category.id
-                    ? "bg-secondary text-secondary-foreground"
-                    : "bg-transparent text-muted-foreground hover:text-secondary border border-border hover:border-secondary"
+                    ? "btn-luxury"
+                    : "bg-transparent text-muted-foreground hover:text-secondary pearl-border hover:border-secondary"
                 )}
               >
                 {category.name}
@@ -153,15 +155,16 @@ const Gallery = () => {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="group relative aspect-square overflow-hidden bg-card"
+                className="group relative aspect-square overflow-hidden glass-card"
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 oily-sheen opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <h3 className="font-serif text-xl text-white">{item.title}</h3>
                   <p className="text-white/70 text-sm capitalize">
                     {item.category}
@@ -174,8 +177,9 @@ const Gallery = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 glossy-dark text-secondary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 oily-sheen" />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl mb-6">
             Ready to Start Your Transformation?
           </h2>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { cn } from "@/lib/utils";
@@ -84,6 +83,7 @@ const Services = () => {
           }}
         />
         <div className="hero-overlay" />
+        <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 text-center text-white px-4">
           <p className="subheading text-white/80 mb-4">What We Offer</p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-wide">
@@ -93,11 +93,12 @@ const Services = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 glossy-surface">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-6">
             Universal Beauty, Personalized Care
           </h2>
+          <div className="divider-elegant" />
           <p className="text-muted-foreground leading-relaxed">
             Every treatment at Flawless is tailored to your unique needs and goals.
             Our expert team combines cutting-edge technology with artistic precision
@@ -107,13 +108,13 @@ const Services = () => {
       </section>
 
       {/* Services Accordion */}
-      <section className="py-8 md:py-16 bg-muted">
+      <section className="py-8 md:py-16 bg-muted oily-sheen">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-4">
             {categories.map((category) => (
               <div
                 key={category.id}
-                className="bg-card overflow-hidden shadow-sm"
+                className="glass-card overflow-hidden"
               >
                 {/* Category Header */}
                 <button
@@ -122,7 +123,7 @@ const Services = () => {
                       expandedCategory === category.id ? null : category.id
                     )
                   }
-                  className="w-full flex items-center justify-between p-6 md:p-8 text-left hover:bg-muted/50 transition-colors"
+                  className="w-full flex items-center justify-between p-6 md:p-8 text-left hover:bg-muted/50 transition-colors relative z-10"
                 >
                   <div>
                     <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-2">
@@ -142,16 +143,16 @@ const Services = () => {
                 {/* Expanded Content */}
                 <div
                   className={cn(
-                    "overflow-hidden transition-all duration-300",
+                    "overflow-hidden transition-all duration-500",
                     expandedCategory === category.id
                       ? "max-h-[1000px] opacity-100"
                       : "max-h-0 opacity-0"
                   )}
                 >
-                  <div className="p-6 md:p-8 pt-0 border-t border-border">
+                  <div className="p-6 md:p-8 pt-0 border-t border-border relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       {/* Image */}
-                      <div className="aspect-[4/3] overflow-hidden">
+                      <div className="aspect-[4/3] overflow-hidden glossy-frame">
                         <img
                           src={category.image}
                           alt={category.name}
@@ -199,8 +200,9 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 glossy-dark text-secondary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 oily-sheen" />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl mb-6">
             Not Sure Which Treatment Is Right for You?
           </h2>

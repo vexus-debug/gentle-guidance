@@ -15,6 +15,8 @@ const Index = () => {
           }}
         />
         <div className="hero-overlay" />
+        {/* Oily sheen overlay */}
+        <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <p className="subheading text-white/80 mb-4">Welcome to Flawless</p>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-wide mb-6 leading-tight">
@@ -45,14 +47,14 @@ const Index = () => {
       </section>
 
       {/* Intro Section */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-20 md:py-32 glossy-surface">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="subheading mb-4">Our Philosophy</p>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-secondary mb-6">
               Experience True Rejuvenation
             </h2>
-            <div className="divider-elegant bg-primary" />
+            <div className="divider-elegant" />
             <p className="text-muted-foreground leading-relaxed text-lg">
               At Flawless, we believe that true beauty lies in the harmony of
               nature and science. Our expert team of aestheticians and medical
@@ -64,7 +66,7 @@ const Index = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 md:py-32 bg-muted">
+      <section className="py-20 md:py-32 bg-muted oily-sheen">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="subheading mb-4">What We Offer</p>
@@ -99,16 +101,16 @@ const Index = () => {
             ].map((service, index) => (
               <div
                 key={index}
-                className="group bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="group glass-card overflow-hidden transition-all duration-500 hover:shadow-xl"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[4/3] overflow-hidden glossy-frame">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 relative">
                   <h3 className="font-serif text-2xl text-secondary mb-3">
                     {service.title}
                   </h3>
@@ -136,8 +138,8 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="py-20 glossy-dark text-secondary-foreground">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
               { icon: Calendar, value: "15+", label: "Years Experience" },
@@ -146,7 +148,9 @@ const Index = () => {
               { icon: Star, value: "4.9", label: "Average Rating" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <stat.icon className="w-8 h-8 mx-auto mb-4 text-spa-gold" />
+                <div className="glossy-icon w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <stat.icon className="w-7 h-7 text-spa-gold" />
+                </div>
                 <div className="font-serif text-4xl md:text-5xl mb-2">
                   {stat.value}
                 </div>
@@ -160,7 +164,7 @@ const Index = () => {
       </section>
 
       {/* About Preview */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-20 md:py-32 glossy-surface">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1">
@@ -185,15 +189,15 @@ const Index = () => {
               </Link>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="relative">
+              <div className="relative glossy-frame">
                 <img
                   src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=800&q=80"
                   alt="Flawless Med Spa Interior"
                   className="w-full aspect-[4/5] object-cover"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 md:p-8">
-                  <div className="font-serif text-3xl md:text-4xl">15+</div>
-                  <p className="text-xs uppercase tracking-[0.15em] mt-1">
+                <div className="absolute -bottom-6 -left-6 glass-card text-secondary p-6 md:p-8">
+                  <div className="font-serif text-3xl md:text-4xl relative z-10">15+</div>
+                  <p className="text-xs uppercase tracking-[0.15em] mt-1 text-muted-foreground relative z-10">
                     Years of Excellence
                   </p>
                 </div>
@@ -204,7 +208,7 @@ const Index = () => {
       </section>
 
       {/* Testimonial Preview */}
-      <section className="py-20 md:py-32 bg-muted">
+      <section className="py-20 md:py-32 bg-muted oily-sheen">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="subheading mb-4">Client Love</p>
@@ -212,8 +216,8 @@ const Index = () => {
               What Our Clients Say
             </h2>
 
-            <div className="bg-card p-8 md:p-12 shadow-sm">
-              <div className="flex items-center justify-center gap-1 mb-6">
+            <div className="glass-card p-8 md:p-12">
+              <div className="flex items-center justify-center gap-1 mb-6 relative z-10">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
@@ -222,12 +226,12 @@ const Index = () => {
                   />
                 ))}
               </div>
-              <blockquote className="font-serif text-2xl md:text-3xl text-secondary mb-6 italic leading-relaxed">
+              <blockquote className="font-serif text-2xl md:text-3xl text-secondary mb-6 italic leading-relaxed relative z-10">
                 "The team at Flawless truly understands beauty. My skin has
                 never looked better, and I feel more confident than ever. This
                 is now my go-to spa for everything!"
               </blockquote>
-              <div>
+              <div className="relative z-10">
                 <p className="font-medium text-secondary">Sarah M.</p>
                 <p className="text-sm text-muted-foreground">Verified Client</p>
               </div>
@@ -253,7 +257,8 @@ const Index = () => {
               "url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1920&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-secondary/80" />
+        <div className="absolute inset-0 glossy-dark opacity-90" />
+        <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6">
             Ready to Feel Flawless?

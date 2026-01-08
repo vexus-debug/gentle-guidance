@@ -54,6 +54,7 @@ const About = () => {
           }}
         />
         <div className="hero-overlay" />
+        <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 text-center text-white px-4">
           <p className="subheading text-white/80 mb-4">Our Story</p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-wide">
@@ -63,10 +64,10 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-20 md:py-32 glossy-surface">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
+            <div className="glossy-frame">
               <img
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
                 alt="Flawless Med Spa"
@@ -104,7 +105,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 md:py-32 bg-muted">
+      <section className="py-20 md:py-32 bg-muted oily-sheen">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="subheading mb-4">What Drives Us</p>
@@ -115,14 +116,14 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+              <div key={index} className="text-center glass-card p-8">
+                <div className="glossy-icon inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 relative z-10">
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-serif text-2xl text-secondary mb-3">
+                <h3 className="font-serif text-2xl text-secondary mb-3 relative z-10">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground">{value.description}</p>
+                <p className="text-muted-foreground relative z-10">{value.description}</p>
               </div>
             ))}
           </div>
@@ -130,7 +131,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-20 md:py-32 glossy-surface">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="subheading mb-4">Curated Mastery</p>
@@ -142,11 +143,11 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="group">
-                <div className="aspect-[3/4] overflow-hidden mb-6">
+                <div className="aspect-[3/4] overflow-hidden mb-6 glossy-frame">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <h3 className="font-serif text-2xl text-secondary mb-1">
@@ -163,8 +164,9 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 glossy-dark text-secondary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 oily-sheen" />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl mb-6">
             Experience the Flawless Difference
           </h2>

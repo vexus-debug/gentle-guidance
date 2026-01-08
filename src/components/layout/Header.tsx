@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import MobileNav from "./MobileNav";
 
@@ -21,9 +21,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
+      <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-20 relative z-10">
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <span className="font-serif text-2xl md:text-3xl tracking-wide text-secondary">
@@ -38,11 +38,14 @@ const Header = () => {
                   key={link.path}
                   to={link.path}
                   className={cn(
-                    "text-sm uppercase tracking-[0.15em] transition-colors duration-300 hover:text-primary",
+                    "text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:text-primary relative",
                     isActive(link.path) ? "text-primary" : "text-foreground/80"
                   )}
                 >
                   {link.name}
+                  {isActive(link.path) && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+                  )}
                 </Link>
               ))}
             </nav>

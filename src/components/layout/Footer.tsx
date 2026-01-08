@@ -5,9 +5,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="glossy-dark text-secondary-foreground relative overflow-hidden">
+      <div className="absolute inset-0 oily-sheen" />
+      
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
@@ -19,14 +21,14 @@ const Footer = () => {
             <div className="flex items-center gap-4 pt-2">
               <a
                 href="#"
-                className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+                className="glossy-icon p-2 rounded-full transition-all duration-500 hover:scale-110"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
               <a
                 href="#"
-                className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+                className="glossy-icon p-2 rounded-full transition-all duration-500 hover:scale-110"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
@@ -48,7 +50,7 @@ const Footer = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="block text-white/70 hover:text-white transition-colors text-sm"
+                  className="block text-white/70 hover:text-white transition-colors duration-300 text-sm"
                 >
                   {link.name}
                 </Link>
@@ -70,7 +72,7 @@ const Footer = () => {
                 <Link
                   key={service}
                   to="/services"
-                  className="block text-white/70 hover:text-white transition-colors text-sm"
+                  className="block text-white/70 hover:text-white transition-colors duration-300 text-sm"
                 >
                   {service}
                 </Link>
@@ -84,14 +86,14 @@ const Footer = () => {
             <div className="space-y-4">
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors duration-300 text-sm"
               >
                 <Phone size={16} />
                 <span>(123) 456-7890</span>
               </a>
               <a
                 href="mailto:info@flawlessspa.com"
-                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
+                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors duration-300 text-sm"
               >
                 <Mail size={16} />
                 <span>info@flawlessspa.com</span>
@@ -110,7 +112,10 @@ const Footer = () => {
                 href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-white text-secondary text-xs uppercase tracking-[0.15em] font-medium transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-white text-secondary text-xs uppercase tracking-[0.15em] font-medium transition-all duration-500 hover:opacity-90 hover:scale-105"
+                style={{
+                  boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3), 0 4px 12px rgba(0,0,0,0.2)',
+                }}
               >
                 <MessageCircle size={16} />
                 Book via WhatsApp
@@ -121,15 +126,15 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/10 relative z-10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
             <p>© {currentYear} Flawless Med Spa. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <Link to="/privacy" className="hover:text-white transition-colors">
+              <Link to="/privacy" className="hover:text-white transition-colors duration-300">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-white transition-colors">
+              <Link to="/terms" className="hover:text-white transition-colors duration-300">
                 Terms of Service
               </Link>
             </div>
