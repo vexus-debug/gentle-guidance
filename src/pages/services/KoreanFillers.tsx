@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import revolaxLipInjection from "@/assets/revolax-lip-injection.jpg";
 import fillerCheekVolumization from "@/assets/filler-cheek-volumization.jpg";
 import fillerJawlineContouring from "@/assets/filler-jawline-contouring.jpg";
-import fillerFacialInjection from "@/assets/filler-facial-injection.jpg";
-import fillerGentleTreatment from "@/assets/filler-gentle-treatment.jpg";
+import fillerDermalaxComprehensive from "@/assets/filler-dermalax-comprehensive.jpg";
+import fillerRejuvenesseDelicate from "@/assets/filler-rejuvenesse-delicate.jpg";
 
 const treatments = [
   {
@@ -62,7 +62,7 @@ const treatments = [
   },
   {
     name: "Dermalax",
-    image: fillerFacialInjection,
+    image: fillerDermalaxComprehensive,
     overview: "Dermalax offers a versatile range of Korean dermal fillers suitable for everything from delicate fine line treatment to substantial volume restoration. Known for excellent moldability and natural results, Dermalax allows practitioners to create customized treatment plans addressing multiple concerns in a single session.",
     howItWorks: "Dermalax employs advanced cross-linking technology to create hyaluronic acid gels with varying densities and viscosities. Lighter formulations flow easily for superficial wrinkle filling, while denser versions provide structure for volumization. All formulations integrate well with tissue for natural-looking, natural-feeling results.",
     benefits: [
@@ -79,7 +79,7 @@ const treatments = [
   },
   {
     name: "Rejuvenesse",
-    image: fillerGentleTreatment,
+    image: fillerRejuvenesseDelicate,
     overview: "Rejuvenesse is a sophisticated Korean filler designed for those seeking soft, natural enhancement with minimal post-treatment effects. Its biocompatible formulation provides gentle volumization and hydration while causing notably less swelling than many alternatives, making it popular for patients who can't afford visible downtime.",
     howItWorks: "Rejuvenesse features optimally cross-linked hyaluronic acid designed for maximum biocompatibility. The molecular structure minimizes inflammatory response while still providing effective volumization. The softer gel consistency integrates seamlessly with tissue, creating imperceptible enhancement.",
     benefits: [
