@@ -15,7 +15,7 @@ const DualPillars = () => {
               Spa & Wellness
             </h3>
             <p className="text-muted-foreground mb-6 relative z-10 max-w-md mx-auto">
-              Indulge in our range of premium treatments designed specifically for melanin-rich skin. 
+              Indulge in our range of premium treatments designed to meet your unique needs. 
               From facials to body contouring, we bring out your natural radiance with care and expertise.
             </p>
             <Link to="/services" className="btn-luxury">

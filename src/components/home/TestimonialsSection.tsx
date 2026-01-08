@@ -9,13 +9,13 @@ const testimonials = [
     name: "Adaeze N.",
     role: "Facial Treatment Client",
     image: testimonial1,
-    quote: "ZealAesthetics transformed not just my skin, but my confidence. The team truly understands Black skin and I've never felt more beautiful!",
+    quote: "ZealAesthetics transformed not just my skin, but my confidence. The team truly understands my needs and I've never felt more beautiful!",
   },
   {
     name: "Chioma O.",
     role: "Regular Client",
     image: testimonial2,
-    quote: "Finally, a spa that gets it! My hyperpigmentation has improved dramatically and I love that they use products made for melanin-rich skin.",
+    quote: "Finally, a spa that gets it! My skin concerns have improved dramatically and I love that they use premium, effective products.",
   },
   {
     name: "Mrs. Amaka K.",
@@ -32,10 +32,10 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <p className="subheading mb-4">Client Love</p>
           <h2 className="font-serif text-4xl md:text-5xl text-secondary">
-            What Our Queens Say
+            What Our Clients Say
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Real stories from real women who've experienced the ZealAesthetics difference.
+            Real stories from real clients who've experienced the ZealAesthetics difference.
           </p>
         </div>
 

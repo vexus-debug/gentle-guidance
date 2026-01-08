@@ -8,7 +8,7 @@ import hero3 from "@/assets/hero-3.jpg";
 const heroImages = [
   {
     src: hero1,
-    alt: "Black woman enjoying relaxing spa facial treatment",
+    alt: "Client enjoying relaxing spa facial treatment",
   },
   {
     src: hero2,
@@ -16,7 +16,7 @@ const heroImages = [
   },
   {
     src: hero3,
-    alt: "Luxurious African-inspired spa interior",
+    alt: "Luxurious spa interior with elegant ambiance",
   },
 ];
 
@@ -55,11 +55,11 @@ const HeroSlideshow = () => {
           Welcome to ZealAesthetics
         </p>
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-wide mb-6 leading-tight">
-          CELEBRATING YOUR <span className="text-spa-gold">MELANIN</span>
+          ELEVATE YOUR <span className="text-spa-gold">NATURAL BEAUTY</span>
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
-          A luxurious sanctuary dedicated to the beauty and wellness of Black women. 
-          Experience premium skincare tailored specifically for melanin-rich skin.
+          A luxurious sanctuary dedicated to your beauty and wellness. 
+          Experience premium skincare and aesthetic treatments tailored to your unique needs.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
