@@ -9,54 +9,57 @@
 
 @layer base {
   :root {
-    /* Cream/off-white background */
-    --background: 40 33% 97%;
-    --foreground: 25 25% 20%;
+    /* Warm cream background - Earth & Gold palette */
+    --background: 38 40% 96%;
+    --foreground: 20 30% 18%;
 
-    /* Cards with subtle warmth */
-    --card: 40 30% 98%;
-    --card-foreground: 25 25% 20%;
+    /* Cards with warm ivory tones */
+    --card: 40 35% 97%;
+    --card-foreground: 20 30% 18%;
 
-    --popover: 40 30% 98%;
-    --popover-foreground: 25 25% 20%;
+    --popover: 40 35% 97%;
+    --popover-foreground: 20 30% 18%;
 
-    /* Primary: Warm taupe/rose - the signature spa color */
-    --primary: 25 30% 60%;
+    /* Primary: Rich terracotta - Afrocentric warmth */
+    --primary: 18 55% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Chocolate brown - rich accent */
-    --secondary: 25 35% 25%;
-    --secondary-foreground: 40 30% 95%;
+    /* Secondary: Deep earth brown */
+    --secondary: 20 45% 22%;
+    --secondary-foreground: 40 35% 95%;
 
-    /* Muted: Soft cream for subtle backgrounds */
-    --muted: 35 25% 92%;
-    --muted-foreground: 25 15% 45%;
+    /* Muted: Soft sand for subtle backgrounds */
+    --muted: 35 30% 90%;
+    --muted-foreground: 20 20% 40%;
 
-    /* Accent: Dusty rose highlight */
-    --accent: 20 35% 70%;
-    --accent-foreground: 25 35% 20%;
+    /* Accent: Warm bronze/copper */
+    --accent: 28 50% 55%;
+    --accent-foreground: 20 45% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 25 30% 60%;
+    --border: 30 25% 82%;
+    --input: 30 25% 82%;
+    --ring: 18 55% 45%;
 
     --radius: 0.25rem;
 
-    /* Custom spa colors */
-    --spa-cream: 40 33% 97%;
-    --spa-taupe: 25 30% 60%;
-    --spa-rose: 20 35% 70%;
-    --spa-chocolate: 25 35% 25%;
-    --spa-gold: 38 60% 55%;
-    --spa-beige: 35 30% 88%;
+    /* Custom spa colors - Earth & Gold Afrocentric palette */
+    --spa-cream: 38 40% 96%;
+    --spa-taupe: 25 35% 55%;
+    --spa-rose: 15 40% 60%;
+    --spa-chocolate: 20 50% 20%;
+    --spa-gold: 42 75% 50%;
+    --spa-beige: 35 35% 85%;
+    --spa-terracotta: 18 55% 45%;
+    --spa-bronze: 28 50% 55%;
+    --spa-earth: 20 45% 30%;
 
     /* Glossy effect colors */
     --glossy-highlight: 0 0% 100%;
-    --glossy-shimmer: 38 60% 75%;
-    --glossy-pearl: 30 40% 95%;
+    --glossy-shimmer: 42 75% 65%;
+    --glossy-pearl: 38 35% 94%;
   }
 
   .dark {
