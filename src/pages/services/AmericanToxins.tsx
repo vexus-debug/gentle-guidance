@@ -1,6 +1,7 @@
 import { Award, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
+import botoxTreatment from "@/assets/botox-treatment.jpg";
 
 const treatments = [
   {
@@ -17,7 +18,8 @@ const treatments = [
     ],
     idealCandidates: "Botox is ideal for adults seeking to reduce or prevent dynamic wrinkles—those formed by muscle movement like frown lines, crow's feet, and forehead creases. It's also excellent for patients with chronic migraines, excessive sweating, or those new to aesthetic treatments who want a proven option.",
     whatToExpect: "Treatment takes just 10-20 minutes. Small injections are placed precisely in targeted muscles using ultra-fine needles. Most patients describe the sensation as tiny pinches. No anesthesia is typically needed. You can return to normal activities immediately.",
-    recovery: "No downtime required. Avoid rubbing treated areas for 4 hours and strenuous exercise for 24 hours. Results begin appearing in 3-5 days, with full effects visible at 10-14 days. Results typically last 3-4 months, with some patients extending duration with regular treatments."
+    recovery: "No downtime required. Avoid rubbing treated areas for 4 hours and strenuous exercise for 24 hours. Results begin appearing in 3-5 days, with full effects visible at 10-14 days. Results typically last 3-4 months, with some patients extending duration with regular treatments.",
+    image: botoxTreatment
   },
   {
     name: "Dysport",
@@ -126,6 +128,16 @@ const AmericanToxins = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                {"image" in treatment && treatment.image && (
+                  <div className="mb-8">
+                    <img
+                      src={treatment.image}
+                      alt={`${treatment.name} treatment`}
+                      className="w-full rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>
