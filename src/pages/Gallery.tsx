@@ -7,84 +7,84 @@ const Gallery = () => {
 
   const categories = [
     { id: "all", name: "All" },
-    { id: "injectables", name: "Injectables" },
-    { id: "facials", name: "Facials" },
-    { id: "body", name: "Body" },
     { id: "spa", name: "Our Spa" },
+    { id: "treatments", name: "Treatments" },
+    { id: "training", name: "Training" },
+    { id: "results", name: "Results" },
   ];
 
   const galleryItems = [
     {
       id: 1,
-      category: "injectables",
-      title: "Lip Enhancement",
-      image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 2,
-      category: "facials",
-      title: "Glowing Skin",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 3,
       category: "spa",
       title: "Treatment Room",
       image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80",
     },
     {
+      id: 2,
+      category: "treatments",
+      title: "Facial Treatment",
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 3,
+      category: "spa",
+      title: "Relaxation Area",
+      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+    },
+    {
       id: 4,
-      category: "body",
-      title: "Body Contouring Results",
+      category: "treatments",
+      title: "Massage Therapy",
       image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 5,
-      category: "injectables",
-      title: "Natural Enhancement",
-      image: "https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=800&q=80",
+      category: "training",
+      title: "Training Session",
+      image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 6,
-      category: "spa",
-      title: "Relaxation Lounge",
-      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 7,
-      category: "facials",
-      title: "Hydrating Treatment",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 8,
-      category: "body",
-      title: "Wellness Journey",
-      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 9,
       category: "spa",
       title: "Premium Products",
       image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80",
     },
     {
+      id: 7,
+      category: "results",
+      title: "Glowing Skin",
+      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 8,
+      category: "treatments",
+      title: "Body Treatment",
+      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 9,
+      category: "training",
+      title: "Practical Learning",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    },
+    {
       id: 10,
-      category: "injectables",
-      title: "Refined Features",
+      category: "results",
+      title: "Radiant Results",
       image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 11,
-      category: "facials",
-      title: "Rejuvenated Skin",
-      image: "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80",
+      category: "spa",
+      title: "Serene Environment",
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 12,
-      category: "spa",
-      title: "Serene Environment",
-      image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=800&q=80",
+      category: "training",
+      title: "Certificate Ceremony",
+      image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -107,7 +107,7 @@ const Gallery = () => {
         <div className="hero-overlay" />
         <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 text-center text-white px-4">
-          <p className="subheading text-white/80 mb-4">The Art of Subtlety</p>
+          <p className="subheading text-white/80 mb-4">Visual Stories</p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-wide">
             Our Gallery
           </h1>
@@ -118,13 +118,13 @@ const Gallery = () => {
       <section className="py-16 md:py-24 glossy-surface">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-6">
-            Visual Stories of Transformation
+            A Glimpse Into ZealAesthetics
           </h2>
           <div className="divider-elegant" />
           <p className="text-muted-foreground leading-relaxed">
-            Explore our gallery showcasing the artistry and results of our
-            treatments. Every image tells a story of confidence restored and
-            natural beauty enhanced.
+            Explore our gallery showcasing our beautiful spa facilities, treatment rooms, 
+            training sessions, and the amazing transformations we create. Every image tells 
+            a story of beauty, expertise, and dedication.
           </p>
         </div>
       </section>
@@ -181,18 +181,19 @@ const Gallery = () => {
         <div className="absolute inset-0 oily-sheen" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl mb-6">
-            Ready to Start Your Transformation?
+            Ready to Experience ZealAesthetics?
           </h2>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            Let us help you write your own story of confidence and beauty.
+            Book a treatment or inquire about our training programs today. 
+            Your journey to beauty and excellence starts here.
           </p>
           <a
-            href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
+            href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-luxury bg-white text-secondary"
           >
-            Book Your Consultation
+            Book Your Visit
           </a>
         </div>
       </section>

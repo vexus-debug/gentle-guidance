@@ -12,6 +12,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: "",
   });
 
@@ -19,8 +20,8 @@ const Contact = () => {
     e.preventDefault();
     
     // Create WhatsApp message with form data
-    const message = `Hello, my name is ${formData.name}.\n\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+    const message = `Hello, my name is ${formData.name}.\n\nEmail: ${formData.email}\nPhone: ${formData.phone}\nInterested in: ${formData.service}\n\nMessage: ${formData.message}`;
+    const whatsappUrl = `https://wa.me/2349015012285?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, "_blank");
     
@@ -30,32 +31,32 @@ const Contact = () => {
     });
     
     // Reset form
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
   };
 
   const contactInfo = [
     {
       icon: Phone,
       label: "Phone",
-      value: "(123) 456-7890",
-      href: "tel:+1234567890",
+      value: "+234 901 501 2285",
+      href: "tel:+2349015012285",
     },
     {
       icon: Mail,
       label: "Email",
-      value: "info@flawlessspa.com",
-      href: "mailto:info@flawlessspa.com",
+      value: "info@zealaesthetics.com",
+      href: "mailto:info@zealaesthetics.com",
     },
     {
       icon: MapPin,
       label: "Address",
-      value: "123 Beauty Lane, Suite 100\nBeverly Hills, CA 90210",
-      href: "https://maps.google.com",
+      value: "33 Tunis Street, Wuse Zone 6\nAbuja 900286, FCT, Nigeria",
+      href: "https://maps.google.com/?q=33+Tunis+Street+Wuse+Zone+6+Abuja+Nigeria",
     },
     {
       icon: Clock,
       label: "Hours",
-      value: "Mon-Sat: 9am - 7pm\nSunday: 10am - 5pm",
+      value: "Mon-Sat: 10am - 7pm\nSunday: Closed",
     },
   ];
 
@@ -92,9 +93,9 @@ const Contact = () => {
               </h2>
               <div className="divider-elegant !mx-0" />
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you have questions about our services, want to book an
-                appointment, or just want to say hello, we're here for you.
-                Reach out through any of the channels below.
+                Whether you want to book a treatment, inquire about our training programs, 
+                or just have questions, we're here to help. Reach out through any of the 
+                channels below.
               </p>
 
               <div className="space-y-6 mb-8">
@@ -110,6 +111,8 @@ const Contact = () => {
                       {item.href ? (
                         <a
                           href={item.href}
+                          target={item.label === "Address" ? "_blank" : undefined}
+                          rel={item.label === "Address" ? "noopener noreferrer" : undefined}
                           className="text-secondary hover:text-primary transition-colors whitespace-pre-line"
                         >
                           {item.value}
@@ -124,9 +127,17 @@ const Contact = () => {
                 ))}
               </div>
 
+              {/* Alternate Address Note */}
+              <div className="glass-card p-4 mb-6">
+                <p className="text-sm text-muted-foreground relative z-10">
+                  <strong>Alternate Address:</strong> 27 Mbabane Street, beside old NEPA office, 
+                  Wuse Zone 6, Abuja Nigeria
+                </p>
+              </div>
+
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
+                href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 btn-luxury bg-green-600 hover:bg-green-700"
@@ -155,7 +166,7 @@ const Contact = () => {
                   <Input
                     id="name"
                     type="text"
-                    placeholder="Jane Doe"
+                    placeholder="Your full name"
                     value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
@@ -175,7 +186,7 @@ const Contact = () => {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="jane@example.com"
+                    placeholder="your@email.com"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -195,13 +206,37 @@ const Contact = () => {
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="(123) 456-7890"
+                    placeholder="+234 XXX XXX XXXX"
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
                     className="bg-background border-border focus:border-primary pearl-border"
                   />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="service"
+                    className="block text-sm uppercase tracking-[0.1em] text-muted-foreground mb-2"
+                  >
+                    Interested In
+                  </label>
+                  <select
+                    id="service"
+                    value={formData.service}
+                    onChange={(e) =>
+                      setFormData({ ...formData, service: e.target.value })
+                    }
+                    className="flex h-10 w-full rounded-md bg-background border border-border px-3 py-2 text-base focus:border-primary focus:outline-none focus:ring-0 pearl-border"
+                  >
+                    <option value="">Select an option</option>
+                    <option value="Spa Treatment">Spa Treatment</option>
+                    <option value="Facial Treatment">Facial Treatment</option>
+                    <option value="Massage Therapy">Massage Therapy</option>
+                    <option value="Training Programs">Training Programs</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
 
                 <div>
@@ -249,13 +284,16 @@ const Contact = () => {
             <div className="glossy-icon w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
               <MapPin className="w-8 h-8 text-primary" />
             </div>
+            <h3 className="font-serif text-xl text-secondary mb-2 relative z-10">
+              ZealAesthetics Institute & Spa
+            </h3>
             <p className="text-muted-foreground relative z-10">
-              123 Beauty Lane, Suite 100
+              33 Tunis Street, Wuse Zone 6
               <br />
-              Beverly Hills, CA 90210
+              Abuja 900286, FCT, Nigeria
             </p>
             <a
-              href="https://maps.google.com"
+              href="https://maps.google.com/?q=33+Tunis+Street+Wuse+Zone+6+Abuja+Nigeria"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-4 text-primary text-sm uppercase tracking-[0.1em] hover:underline relative z-10"

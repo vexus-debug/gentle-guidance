@@ -2,71 +2,77 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const Services = () => {
-  const [expandedCategory, setExpandedCategory] = useState<string | null>("injectables");
+  const [expandedCategory, setExpandedCategory] = useState<string | null>("facials");
 
   const categories = [
     {
-      id: "injectables",
-      name: "Injectables & Fillers",
-      description: "Restore volume, smooth wrinkles, and enhance your natural features with precision injectables.",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
+      id: "facials",
+      name: "Facial Treatments",
+      description: "Customized facials and skin treatments for all skin types and concerns.",
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
       services: [
-        { name: "Botox & Dysport", duration: "30 min", price: "From $12/unit" },
-        { name: "Dermal Fillers", duration: "45 min", price: "From $650" },
-        { name: "Lip Enhancement", duration: "30 min", price: "From $550" },
-        { name: "Jawline Contouring", duration: "45 min", price: "From $800" },
-        { name: "Under-Eye Filler", duration: "30 min", price: "From $700" },
+        { name: "Deep Cleansing Facial", duration: "60 min", description: "Thorough cleansing and extraction for clear skin" },
+        { name: "Acne Treatment Facial", duration: "60 min", description: "Targeted treatment for acne-prone skin" },
+        { name: "Melasma Treatment", duration: "45-60 min", description: "Specialized treatment for hyperpigmentation" },
+        { name: "Hyperpigmentation Correction", duration: "45 min", description: "Even out skin tone and reduce dark spots" },
+        { name: "Anti-Aging Facial", duration: "75 min", description: "Rejuvenating treatment for mature skin" },
+        { name: "Hydrating Glow Facial", duration: "60 min", description: "Deep hydration for radiant, glowing skin" },
       ],
     },
     {
-      id: "facials",
-      name: "Facial Treatments",
-      description: "Revitalize your skin with customized facial treatments designed for your unique needs.",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+      id: "massage",
+      name: "Massage Therapy",
+      description: "Relaxing and therapeutic massage treatments to relieve stress and tension.",
+      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
       services: [
-        { name: "Signature Flawless Facial", duration: "60 min", price: "$175" },
-        { name: "HydraFacial", duration: "45 min", price: "$225" },
-        { name: "Chemical Peel", duration: "30 min", price: "From $150" },
-        { name: "Microneedling", duration: "60 min", price: "From $350" },
-        { name: "LED Light Therapy", duration: "30 min", price: "$75" },
+        { name: "Swedish Massage", duration: "60 min", description: "Classic relaxation massage" },
+        { name: "Deep Tissue Massage", duration: "60 min", description: "Targeted relief for muscle tension" },
+        { name: "Hot Stone Massage", duration: "75 min", description: "Heated stones for deep relaxation" },
+        { name: "Aromatherapy Massage", duration: "60 min", description: "Essential oils for enhanced relaxation" },
+        { name: "Back, Neck & Shoulder", duration: "30 min", description: "Focused treatment for tension areas" },
       ],
     },
     {
       id: "body",
-      name: "Body Contouring",
-      description: "Sculpt and define your silhouette with our advanced non-invasive body treatments.",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+      name: "Body Treatments",
+      description: "Waxing, body scrubs, and contouring treatments for smooth, beautiful skin.",
+      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
       services: [
-        { name: "CoolSculpting", duration: "60 min", price: "From $750" },
-        { name: "Radiofrequency Skin Tightening", duration: "45 min", price: "From $400" },
-        { name: "Cellulite Treatment", duration: "45 min", price: "From $350" },
-        { name: "Body Sculpting Package", duration: "90 min", price: "From $1,200" },
+        { name: "Full Body Waxing", duration: "90 min", description: "Complete hair removal treatment" },
+        { name: "Brazilian Wax", duration: "30 min", description: "Professional intimate waxing" },
+        { name: "Legs & Arms Wax", duration: "45 min", description: "Smooth, hair-free limbs" },
+        { name: "Exfoliating Body Scrub", duration: "45 min", description: "Remove dead skin for soft, smooth skin" },
+        { name: "Body Wrap", duration: "60 min", description: "Detoxifying and hydrating treatment" },
+        { name: "Back Treatment", duration: "45 min", description: "Deep cleansing for back skin" },
       ],
     },
     {
-      id: "laser",
-      name: "Laser Treatments",
-      description: "Advanced laser technology for hair removal, skin resurfacing, and rejuvenation.",
-      image: "https://images.unsplash.com/photo-1598524588066-4cb0473bc4d6?auto=format&fit=crop&w=800&q=80",
+      id: "advanced",
+      name: "Advanced Aesthetics",
+      description: "Medical-grade treatments for visible, lasting results.",
+      image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80",
       services: [
-        { name: "Laser Hair Removal", duration: "30-60 min", price: "From $150" },
-        { name: "Laser Skin Resurfacing", duration: "60 min", price: "From $500" },
-        { name: "IPL Photofacial", duration: "45 min", price: "From $350" },
-        { name: "Tattoo Removal", duration: "30 min", price: "From $200" },
+        { name: "Microneedling", duration: "60 min", description: "Collagen induction therapy for skin renewal" },
+        { name: "Fat Dissolving Treatment", duration: "45 min", description: "Non-surgical fat reduction" },
+        { name: "Chemical Peel", duration: "30-45 min", description: "Professional-grade skin resurfacing" },
+        { name: "LED Light Therapy", duration: "30 min", description: "Light-based skin treatment" },
+        { name: "Dermaplaning", duration: "30 min", description: "Gentle exfoliation and peach fuzz removal" },
       ],
     },
     {
       id: "skin",
-      name: "Skin Rejuvenation",
-      description: "Turn back time with our comprehensive skin rejuvenation and anti-aging treatments.",
+      name: "Skin Concerns",
+      description: "Targeted treatments for specific skin concerns and conditions.",
       image: "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80",
       services: [
-        { name: "PRP Facial (Vampire Facial)", duration: "60 min", price: "$650" },
-        { name: "Microcurrent Lifting", duration: "45 min", price: "$200" },
-        { name: "Oxygen Infusion", duration: "45 min", price: "$175" },
-        { name: "Dermaplaning", duration: "30 min", price: "$125" },
+        { name: "Acne Scar Treatment", duration: "60 min", description: "Reduce the appearance of acne scars" },
+        { name: "Dark Circle Treatment", duration: "30 min", description: "Brighten under-eye area" },
+        { name: "Stretch Mark Treatment", duration: "45 min", description: "Minimize stretch mark appearance" },
+        { name: "Skin Tag Removal", duration: "15-30 min", description: "Safe removal of skin tags" },
+        { name: "Consultation", duration: "30 min", description: "Personalized skin analysis and recommendations" },
       ],
     },
   ];
@@ -96,13 +102,14 @@ const Services = () => {
       <section className="py-16 md:py-24 glossy-surface">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-6">
-            Universal Beauty, Personalized Care
+            Premium Spa & Aesthetic Services
           </h2>
           <div className="divider-elegant" />
           <p className="text-muted-foreground leading-relaxed">
-            Every treatment at Flawless is tailored to your unique needs and goals.
-            Our expert team combines cutting-edge technology with artistic precision
-            to deliver results that enhance your natural beauty.
+            At ZealAesthetics, every treatment is tailored to your unique needs and goals.
+            Our expert team uses premium products and techniques to deliver results that 
+            enhance your natural beauty. From relaxing massages to advanced skin treatments, 
+            we have something for everyone.
           </p>
         </div>
       </section>
@@ -172,17 +179,14 @@ const Services = () => {
                                 {service.name}
                               </h4>
                               <p className="text-sm text-muted-foreground">
-                                {service.duration}
+                                {service.duration} — {service.description}
                               </p>
                             </div>
-                            <span className="text-primary font-medium">
-                              {service.price}
-                            </span>
                           </div>
                         ))}
 
                         <a
-                          href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20a%20treatment"
+                          href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20a%20treatment"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-block mt-4 btn-luxury"
@@ -199,6 +203,26 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Training Promo */}
+      <section className="py-16 md:py-24 glossy-surface">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="subheading mb-4">Want to Learn These Skills?</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-6">
+              Join Our Training Programs
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Learn to perform these treatments professionally with our comprehensive 
+              training courses. Our programs cover everything from skincare basics to 
+              advanced aesthetic techniques.
+            </p>
+            <Link to="/training" className="btn-luxury">
+              Explore Training Programs
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 glossy-dark text-secondary-foreground relative overflow-hidden">
         <div className="absolute inset-0 oily-sheen" />
@@ -207,11 +231,11 @@ const Services = () => {
             Not Sure Which Treatment Is Right for You?
           </h2>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            Schedule a complimentary consultation with our experts to create a
-            personalized treatment plan tailored to your goals.
+            Contact us for a personalized consultation. Our experts will recommend 
+            the best treatments for your specific needs and goals.
           </p>
           <a
-            href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation"
+            href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-luxury bg-white text-secondary"
