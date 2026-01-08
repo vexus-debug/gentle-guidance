@@ -2,6 +2,9 @@ import { Award, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import botoxTreatment from "@/assets/botox-treatment.jpg";
+import toxinDysportForehead from "@/assets/toxin-dysport-forehead.jpg";
+import toxinXeominGlabellar from "@/assets/toxin-xeomin-glabellar.jpg";
+import toxinJeuveauFrown from "@/assets/toxin-jeuveau-frown.jpg";
 
 const treatments = [
   {
@@ -35,7 +38,8 @@ const treatments = [
     ],
     idealCandidates: "Dysport is excellent for patients with larger treatment areas like broad foreheads or those who desire a more diffuse, natural result. It's also ideal for patients who want faster onset of results or those who haven't achieved desired outcomes with other toxins.",
     whatToExpect: "Treatment sessions are quick—typically 15-20 minutes. Multiple small injections are placed in targeted muscles. The procedure is well-tolerated, though numbing cream can be applied for sensitive patients. Results appear faster than some alternatives.",
-    recovery: "Minimal to no downtime. Avoid touching treated areas for 4 hours and exercise for 24 hours. Many patients see initial results in just 24-48 hours, with full effects at 7-10 days. Results typically last 3-4 months, sometimes longer."
+    recovery: "Minimal to no downtime. Avoid touching treated areas for 4 hours and exercise for 24 hours. Many patients see initial results in just 24-48 hours, with full effects at 7-10 days. Results typically last 3-4 months, sometimes longer.",
+    image: toxinDysportForehead
   },
   {
     name: "Xeomin",
@@ -51,7 +55,8 @@ const treatments = [
     ],
     idealCandidates: "Xeomin is particularly suited for patients planning long-term toxin treatment who want to minimize resistance risk. It's also ideal for those who have noticed diminishing results from other toxins and anyone preferring a pure, additive-free formulation.",
     whatToExpect: "Treatment takes 15-20 minutes. Precise injections target specific muscles responsible for wrinkles. The experience is similar to other toxin treatments—quick and comfortable. Most patients require no anesthesia.",
-    recovery: "Return to activities immediately. Standard precautions apply—avoid rubbing the area and heavy exercise for 24 hours. Results typically appear in 3-4 days, reaching full effect at 1-2 weeks. Duration is similar to other toxins at 3-4 months."
+    recovery: "Return to activities immediately. Standard precautions apply—avoid rubbing the area and heavy exercise for 24 hours. Results typically appear in 3-4 days, reaching full effect at 1-2 weeks. Duration is similar to other toxins at 3-4 months.",
+    image: toxinXeominGlabellar
   },
   {
     name: "Jeuveau",
@@ -67,7 +72,8 @@ const treatments = [
     ],
     idealCandidates: "Jeuveau is ideal for patients seeking a modern, aesthetically-focused toxin option. It's excellent for treating frown lines (glabellar complex) and appeals to patients interested in newer innovations or those seeking cost-effective alternatives to legacy brands.",
     whatToExpect: "Treatment is quick—about 15 minutes. Five injections are typically placed in the glabellar region (between the eyebrows). The procedure is comfortable for most patients without anesthesia. You can resume normal activities immediately.",
-    recovery: "Zero downtime. Avoid touching the treated area for 4 hours and intense exercise for 24 hours. Results often appear within 2-3 days, with full effect at 7-10 days. Duration is approximately 3-4 months, comparable to other FDA-approved toxins."
+    recovery: "Zero downtime. Avoid touching the treated area for 4 hours and intense exercise for 24 hours. Results often appear within 2-3 days, with full effect at 7-10 days. Duration is approximately 3-4 months, comparable to other FDA-approved toxins.",
+    image: toxinJeuveauFrown
   }
 ];
 
