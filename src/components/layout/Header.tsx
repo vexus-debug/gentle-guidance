@@ -37,12 +37,12 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-secondary border-b border-secondary-foreground/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20 relative z-10">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <span className="font-serif text-xl md:text-2xl tracking-wide text-secondary">
+              <span className="font-serif text-xl md:text-2xl tracking-wide text-white">
                 ZealAesthetics
               </span>
             </Link>
@@ -61,7 +61,7 @@ const Header = () => {
                       to={link.path}
                       className={cn(
                         "text-xs uppercase tracking-[0.12em] transition-all duration-500 hover:text-primary relative flex items-center gap-1",
-                        isServiceActive() ? "text-primary" : "text-foreground/80"
+                        isServiceActive() ? "text-primary" : "text-white/90"
                       )}
                     >
                       {link.name}
@@ -97,7 +97,7 @@ const Header = () => {
                     to={link.path}
                     className={cn(
                       "text-xs uppercase tracking-[0.12em] transition-all duration-500 hover:text-primary relative",
-                      isActive(link.path) ? "text-primary" : "text-foreground/80"
+                      isActive(link.path) ? "text-primary" : "text-white/90"
                     )}
                   >
                     {link.name}
@@ -113,7 +113,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center gap-4">
               <a
                 href="tel:+2349015012285"
-                className="flex items-center gap-2 text-xs text-foreground/80 hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-xs text-white/90 hover:text-primary transition-colors"
               >
                 <Phone size={14} />
                 <span>+234 901 501 2285</span>
@@ -131,7 +131,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileNavOpen(true)}
-              className="lg:hidden p-2 text-foreground"
+              className="lg:hidden p-2 text-white"
               aria-label="Open menu"
             >
               <Menu size={24} />
