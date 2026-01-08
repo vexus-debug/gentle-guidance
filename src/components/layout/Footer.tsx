@@ -13,10 +13,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-serif text-3xl tracking-wide">Flawless</h3>
+            <h3 className="font-serif text-2xl tracking-wide">ZealAesthetics</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              Where science meets artistry. Experience the pinnacle of aesthetic excellence
-              in a serene, luxurious environment.
+              Abuja's premier destination for luxury spa services and professional aesthetic training. 
+              Where beauty meets expertise.
             </p>
             <div className="flex items-center gap-4 pt-2">
               <a
@@ -43,6 +43,7 @@ const Footer = () => {
               {[
                 { name: "About Us", path: "/about" },
                 { name: "Our Services", path: "/services" },
+                { name: "Training Programs", path: "/training" },
                 { name: "Gallery", path: "/gallery" },
                 { name: "Testimonials", path: "/testimonials" },
                 { name: "Contact", path: "/contact" },
@@ -63,11 +64,11 @@ const Footer = () => {
             <h4 className="text-sm uppercase tracking-[0.2em] mb-6">Services</h4>
             <nav className="space-y-3">
               {[
-                "Injectables & Fillers",
                 "Facial Treatments",
-                "Body Contouring",
-                "Skin Rejuvenation",
-                "Laser Treatments",
+                "Massage Therapy",
+                "Body Treatments",
+                "Advanced Aesthetics",
+                "Skin Concerns",
               ].map((service) => (
                 <Link
                   key={service}
@@ -85,31 +86,37 @@ const Footer = () => {
             <h4 className="text-sm uppercase tracking-[0.2em] mb-6">Contact</h4>
             <div className="space-y-4">
               <a
-                href="tel:+1234567890"
+                href="tel:+2349015012285"
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors duration-300 text-sm"
               >
                 <Phone size={16} />
-                <span>(123) 456-7890</span>
+                <span>+234 901 501 2285</span>
               </a>
               <a
-                href="mailto:info@flawlessspa.com"
+                href="mailto:info@zealaesthetics.com"
                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors duration-300 text-sm"
               >
                 <Mail size={16} />
-                <span>info@flawlessspa.com</span>
+                <span>info@zealaesthetics.com</span>
               </a>
               <div className="flex items-start gap-3 text-white/70 text-sm">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0" />
                 <span>
-                  123 Beauty Lane<br />
-                  Suite 100<br />
-                  Beverly Hills, CA 90210
+                  33 Tunis Street<br />
+                  Wuse Zone 6<br />
+                  Abuja, Nigeria
                 </span>
               </div>
 
+              {/* Hours */}
+              <p className="text-white/70 text-sm">
+                Mon-Sat: 10am - 7pm<br />
+                Sunday: Closed
+              </p>
+
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
+                href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-white text-secondary text-xs uppercase tracking-[0.15em] font-medium transition-all duration-500 hover:opacity-90 hover:scale-105"
@@ -129,7 +136,7 @@ const Footer = () => {
       <div className="border-t border-white/10 relative z-10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-            <p>© {currentYear} Flawless Med Spa. All rights reserved.</p>
+            <p>© {currentYear} ZealAesthetics Institute & Spa. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <Link to="/privacy" className="hover:text-white transition-colors duration-300">
                 Privacy Policy

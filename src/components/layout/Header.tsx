@@ -12,6 +12,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "Training", path: "/training" },
     { name: "Gallery", path: "/gallery" },
     { name: "Testimonials", path: "/testimonials" },
     { name: "Contact", path: "/contact" },
@@ -26,19 +27,19 @@ const Header = () => {
           <div className="flex items-center justify-between h-20 relative z-10">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <span className="font-serif text-2xl md:text-3xl tracking-wide text-secondary">
-                Flawless
+              <span className="font-serif text-xl md:text-2xl tracking-wide text-secondary">
+                ZealAesthetics
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   className={cn(
-                    "text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:text-primary relative",
+                    "text-xs uppercase tracking-[0.12em] transition-all duration-500 hover:text-primary relative",
                     isActive(link.path) ? "text-primary" : "text-foreground/80"
                   )}
                 >
@@ -51,19 +52,19 @@ const Header = () => {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-4">
               <a
-                href="tel:+1234567890"
-                className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors"
+                href="tel:+2349015012285"
+                className="flex items-center gap-2 text-xs text-foreground/80 hover:text-primary transition-colors"
               >
-                <Phone size={16} />
-                <span>(123) 456-7890</span>
+                <Phone size={14} />
+                <span>+234 901 501 2285</span>
               </a>
               <a
-                href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
+                href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-luxury"
+                className="btn-luxury text-xs py-2 px-4"
               >
                 Book Now
               </a>
