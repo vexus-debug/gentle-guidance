@@ -1,6 +1,7 @@
 import { Star, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
+import heroImage from "@/assets/gallery/before-after.jpg";
 
 const Testimonials = () => {
   const spaTestimonials = [
@@ -71,8 +72,7 @@ const Testimonials = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${heroImage})`,
           }}
         />
         <div className="hero-overlay" />
