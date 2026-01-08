@@ -61,16 +61,16 @@ const MobileNav = ({ isOpen, onClose, navLinks }: MobileNavProps) => {
           <div className="p-6 border-t border-white/10 space-y-4">
             {/* Contact */}
             <a
-              href="tel:+1234567890"
+              href="tel:+2349015012285"
               className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
             >
               <Phone size={18} />
-              <span>(123) 456-7890</span>
+              <span>+234 901 501 2285</span>
             </a>
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/1234567890?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
+              href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-4 bg-white text-secondary text-sm uppercase tracking-[0.15em] font-medium transition-opacity hover:opacity-90"
