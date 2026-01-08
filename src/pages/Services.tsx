@@ -241,14 +241,12 @@ const Services = () => {
                         ))}
 
                         <div className="pl-4 md:pl-16 pt-4">
-                          <a
-                            href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20a%20treatment"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                          <Link
+                            to={`/services/${category.id}`}
                             className="inline-block btn-luxury"
                           >
-                            Book This Service
-                          </a>
+                            View Full Details
+                          </Link>
                         </div>
                       </div>
                     </div>
