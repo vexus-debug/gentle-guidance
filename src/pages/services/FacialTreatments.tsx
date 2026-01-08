@@ -2,9 +2,18 @@ import { Sparkles, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 
+import chemicalPeelsImg from "@/assets/treatment-chemical-peels.jpeg";
+import microneedlingImg from "@/assets/treatment-microneedling.jpeg";
+import prpImg from "@/assets/treatment-prp.jpeg";
+import prfImg from "@/assets/treatment-prf.jpeg";
+import hydrafacialImg from "@/assets/treatment-hydrafacial.jpeg";
+import microdermabrasionImg from "@/assets/treatment-microdermabrasion.jpeg";
+import handFootImg from "@/assets/treatment-hand-foot.jpeg";
+
 const treatments = [
   {
     name: "Chemical Peels",
+    image: chemicalPeelsImg,
     overview: "Chemical peels are professional-grade exfoliating treatments that use carefully formulated acid solutions to remove damaged outer layers of skin, revealing the fresh, rejuvenated skin beneath. This treatment accelerates the natural skin renewal process, addressing concerns from mild discoloration to deep wrinkles.",
     howItWorks: "During the treatment, a specialized chemical solution is applied to your skin. This solution works by breaking down the bonds between dead skin cells, causing controlled exfoliation. The depth of the peel—superficial, medium, or deep—determines how many layers of skin are treated. As the old skin peels away over the following days, new skin cells emerge, resulting in a smoother, more even complexion.",
     benefits: [
@@ -21,6 +30,7 @@ const treatments = [
   },
   {
     name: "Microneedling",
+    image: microneedlingImg,
     overview: "Microneedling, also known as collagen induction therapy, is a minimally invasive treatment that uses fine, sterile needles to create controlled micro-injuries in the skin. This triggers the body's natural wound healing response, stimulating collagen and elastin production for firmer, smoother, and more youthful skin.",
     howItWorks: "A specialized device containing fine needles is moved across the treatment area, creating thousands of microscopic channels in the skin. These micro-injuries activate the skin's repair mechanisms, triggering the release of growth factors and the production of new collagen and elastin. The channels also enhance the absorption of topical treatments applied during or after the procedure.",
     benefits: [
@@ -37,6 +47,7 @@ const treatments = [
   },
   {
     name: "PRP (Platelet-Rich Plasma)",
+    image: prpImg,
     overview: "PRP therapy, often called the 'Vampire Facial,' harnesses the regenerative power of your own blood to rejuvenate the skin. By concentrating the platelets and growth factors from your blood and reintroducing them to your skin, this treatment accelerates healing and stimulates natural collagen production for remarkable skin renewal.",
     howItWorks: "A small amount of blood is drawn and placed in a centrifuge to separate the platelet-rich plasma from other blood components. This concentrated PRP, containing 5-10 times the normal concentration of platelets, is then applied to your skin—either topically after microneedling or through direct injections. The growth factors in PRP signal your cells to regenerate and repair.",
     benefits: [
@@ -53,6 +64,7 @@ const treatments = [
   },
   {
     name: "PRF-Biotherapy",
+    image: prfImg,
     overview: "PRF (Platelet-Rich Fibrin) Biotherapy represents the next evolution in regenerative aesthetics. Unlike traditional PRP, PRF contains a fibrin matrix that releases growth factors slowly over time, providing prolonged healing and rejuvenation benefits. This advanced treatment offers superior and longer-lasting results.",
     howItWorks: "Blood is drawn and processed at lower speeds without anticoagulants, creating a fibrin scaffold that naturally traps platelets, white blood cells, and stem cells. This fibrin matrix acts as a sustained-release system, slowly dispensing growth factors over 10-14 days rather than just a few hours like PRP. The result is enhanced tissue regeneration and collagen production.",
     benefits: [
@@ -69,6 +81,7 @@ const treatments = [
   },
   {
     name: "Hydrafacial",
+    image: hydrafacialImg,
     overview: "Hydrafacial is a revolutionary multi-step facial treatment that combines cleansing, exfoliation, extraction, hydration, and antioxidant protection simultaneously. This patented technology delivers instant, noticeable results with no downtime, making it one of the most popular medical-grade facials worldwide.",
     howItWorks: "The Hydrafacial uses a unique vortex-fusion delivery system with specialized tips. Step one cleanses and exfoliates dead skin cells. Step two uses gentle acid peel to loosen debris. Step three painlessly extracts impurities using vortex suction. Step four saturates skin with intensive hydrating serums containing hyaluronic acid, peptides, and antioxidants. The entire process is soothing and comfortable.",
     benefits: [
@@ -85,6 +98,7 @@ const treatments = [
   },
   {
     name: "Microdermabrasion",
+    image: microdermabrasionImg,
     overview: "Microdermabrasion is a gentle, non-invasive resurfacing treatment that uses fine crystals or a diamond-tipped wand to mechanically exfoliate the outer layer of dead skin cells. This tried-and-true technique reveals fresher, younger-looking skin while stimulating cell renewal and collagen production.",
     howItWorks: "The treatment uses either crystal microdermabrasion (spraying fine crystals) or diamond-tip microdermabrasion (using an abrasive diamond wand) to gently abrade the skin's surface. Simultaneously, a vacuum suction removes the exfoliated cells and debris. This mechanical exfoliation triggers the skin's natural healing response, promoting new cell growth and increased collagen production.",
     benefits: [
@@ -101,6 +115,7 @@ const treatments = [
   },
   {
     name: "Hand & Foot Treatment",
+    image: handFootImg,
     overview: "Our specialized Hand & Foot Rejuvenation Treatment addresses the often-neglected signs of aging on hands and feet. These areas frequently reveal age through thin skin, visible veins, sun spots, and loss of volume. Our comprehensive approach restores youthful appearance to these highly visible areas.",
     howItWorks: "This multi-faceted treatment may include gentle exfoliation to remove dead skin, targeted treatments for age spots and sun damage, hydrating masks, and optional injectable treatments for volume restoration. For hands, we address crepey skin and prominent veins. For feet, we focus on skin smoothing and callus reduction alongside rejuvenation.",
     benefits: [
@@ -174,6 +189,14 @@ const FacialTreatments = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden mb-6">
+                  <img 
+                    src={treatment.image} 
+                    alt={treatment.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>
