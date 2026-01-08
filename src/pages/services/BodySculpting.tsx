@@ -1,10 +1,15 @@
 import { Target, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
+import woodTherapyImg from "@/assets/treatments/wood-therapy.jpg";
+import bodySculptingImg from "@/assets/treatments/body-sculpting.jpg";
+import lymphaticImg from "@/assets/treatments/lymphatic-drainage.jpg";
+import massageImg from "@/assets/treatments/massage-therapy.jpg";
 
 const treatments = [
   {
     name: "Wood Fat Reduction Treatment",
+    image: woodTherapyImg,
     overview: "Wood therapy (Maderotherapy) is a traditional body sculpting technique that uses specially designed wooden tools to break down stubborn fat deposits, reduce cellulite, and contour the body. This natural, non-invasive approach has been used for centuries and is now experiencing renewed popularity for its effectiveness in body shaping and lymphatic stimulation.",
     howItWorks: "Trained therapists use various wooden instruments—rollers, cups, and sculpting tools—to apply deep pressure and specific massage movements to target areas. This mechanical action breaks down fat cells, stimulates lymphatic drainage, and promotes blood circulation. The repetitive rolling and kneading movements help dislodge fat deposits from connective tissue, making them easier for the body to metabolize.",
     benefits: [
@@ -21,6 +26,7 @@ const treatments = [
   },
   {
     name: "Body Sculpting",
+    image: bodySculptingImg,
     overview: "Our non-surgical body sculpting treatments use advanced technologies to reduce fat, tighten skin, and contour the body without surgery or significant downtime. These modern approaches offer alternatives to liposuction for those seeking to refine their silhouette and address stubborn areas resistant to diet and exercise.",
     howItWorks: "Depending on the specific technology used, body sculpting may utilize radiofrequency, ultrasound, cryolipolysis (fat freezing), or electromagnetic energy to target fat cells. These technologies either destroy fat cells directly (which the body then naturally eliminates) or stimulate muscle contractions equivalent to thousands of exercises. Some treatments combine multiple modalities.",
     benefits: [
@@ -37,6 +43,7 @@ const treatments = [
   },
   {
     name: "Lymphatic Drainage Massage",
+    image: lymphaticImg,
     overview: "Lymphatic drainage massage is a specialized, gentle massage technique designed to stimulate the lymphatic system and promote the natural removal of waste, toxins, and excess fluid from the body. This therapeutic treatment reduces swelling, supports immune function, and leaves you feeling lighter, refreshed, and rejuvenated.",
     howItWorks: "Using very light, rhythmic, pumping movements, the therapist stimulates lymph vessels just beneath the skin. This encourages lymph fluid—which carries waste products and immune cells—to move toward lymph nodes where it can be processed. The technique follows specific pathways that mirror the lymphatic system's natural flow.",
     benefits: [
@@ -53,6 +60,7 @@ const treatments = [
   },
   {
     name: "Massage Therapy",
+    image: massageImg,
     overview: "Our therapeutic massage services address physical tension, stress, and muscular discomfort through skilled manual techniques. Whether you seek relaxation, pain relief, or recovery support, our trained therapists customize each session to your specific needs using various modalities from Swedish to deep tissue.",
     howItWorks: "Massage therapy works by manipulating soft tissues—muscles, tendons, ligaments, and fascia—to release tension, improve circulation, and promote healing. Different techniques address different needs: Swedish massage uses flowing strokes for relaxation; deep tissue targets chronic tension; sports massage aids athletic recovery. The therapist adapts pressure and technique to your requirements.",
     benefits: [
@@ -126,6 +134,16 @@ const BodySculpting = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                {treatment.image && (
+                  <div className="mb-8">
+                    <img
+                      src={treatment.image}
+                      alt={`${treatment.name} treatment in action`}
+                      className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>

@@ -2,10 +2,17 @@ import { CircleDot, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import sculptraBeforeAfter from "@/assets/sculptra-before-after.jpg";
+import juvedermImg from "@/assets/treatments/juvederm-lip-filler.jpg";
+import restylaneImg from "@/assets/treatments/restylane-undereye.jpg";
+import volumaImg from "@/assets/treatments/voluma-cheek.jpg";
+import volbellaImg from "@/assets/treatments/volbella-lips.jpg";
+import radiesseImg from "@/assets/treatments/radiesse-hands.jpg";
+import sculptraImg from "@/assets/treatments/sculptra-consultation.jpg";
 
 const treatments = [
   {
     name: "Juvederm",
+    image: juvedermImg,
     overview: "Juvederm is a world-renowned collection of hyaluronic acid dermal fillers designed to address a wide range of facial concerns. Known for its smooth-gel VYCROSS technology, Juvederm provides natural-looking results for lips, cheeks, and facial lines with exceptional comfort during injection and impressive longevity.",
     howItWorks: "Juvederm's proprietary VYCROSS technology combines different molecular weights of hyaluronic acid, creating a smooth, cohesive gel that flows easily through needles and integrates seamlessly with facial tissue. Once injected, the cross-linked HA attracts water, providing immediate volume while maintaining a soft, natural feel that moves with your expressions.",
     benefits: [
@@ -22,6 +29,7 @@ const treatments = [
   },
   {
     name: "Restylane",
+    image: restylaneImg,
     overview: "Restylane is a pioneering family of FDA-approved dermal fillers that revolutionized aesthetic medicine. With specialized formulations for fine lines, lips, cheeks, and hands, Restylane offers targeted solutions using NASHA and XpresHAn technologies for natural movement and long-lasting results.",
     howItWorks: "Restylane products use either NASHA (Non-Animal Stabilized Hyaluronic Acid) or XpresHAn technology. NASHA creates a firmer gel ideal for structural support, while XpresHAn creates a more flexible gel that moves naturally with facial expressions. Both attract water to treated areas, providing hydration alongside volumization.",
     benefits: [
@@ -38,6 +46,7 @@ const treatments = [
   },
   {
     name: "Voluma XC",
+    image: volumaImg,
     overview: "Juvederm Voluma XC is specifically engineered for deep injection in the cheek area, providing significant lift and volume restoration. As the first FDA-approved filler for age-related volume loss in the midface, Voluma XC addresses one of the most impactful signs of aging with results lasting up to two years.",
     howItWorks: "Voluma XC features a high concentration of cross-linked hyaluronic acid with exceptional cohesivity and elasticity (high G-prime). This allows it to lift and support cheek tissue against gravity. Injected deep along the cheekbone or in the mid-cheek area, it creates a foundation that lifts the entire lower face.",
     benefits: [
@@ -54,6 +63,7 @@ const treatments = [
   },
   {
     name: "Volbella XC",
+    image: volbellaImg,
     overview: "Juvederm Volbella XC is a sophisticated, subtle lip filler designed for patients who want natural-looking lip enhancement and correction of perioral lines (smoker's lines around the mouth). Using VYCROSS technology, Volbella provides soft, smooth results without the overfilled appearance.",
     howItWorks: "Volbella XC uses a lower concentration of hyaluronic acid with VYCROSS cross-linking, creating a softer, more pliable gel perfect for the delicate lip area. Its smooth consistency allows for precise placement and subtle enhancement, avoiding the firm, unnatural feel that can occur with denser fillers.",
     benefits: [
@@ -70,6 +80,7 @@ const treatments = [
   },
   {
     name: "Radiesse",
+    image: radiesseImg,
     overview: "Radiesse is a unique dermal filler composed of calcium hydroxylapatite (CaHA) microspheres suspended in a gel carrier. Unlike hyaluronic acid fillers, Radiesse provides immediate volume while also stimulating your body's own collagen production for lasting structural improvement that continues after the product has been absorbed.",
     howItWorks: "When injected, Radiesse's gel carrier provides immediate volume and correction. Over time, the CaHA microspheres stimulate fibroblasts to produce new collagen around the injection site. As the gel carrier is absorbed, your own collagen takes over, providing structural support that lasts well beyond the original filler.",
     benefits: [
@@ -86,6 +97,7 @@ const treatments = [
   },
   {
     name: "Sculptra Aesthetics",
+    image: sculptraImg,
     overview: "Sculptra Aesthetics is a poly-L-lactic acid (PLLA) collagen biostimulator that works differently from traditional fillers. Rather than providing immediate volume, Sculptra gradually stimulates your body's own collagen production, resulting in subtle, progressive improvement that can last more than two years.",
     howItWorks: "Sculptra's PLLA microparticles are injected deep into the dermis where they trigger a controlled inflammatory response. This stimulates fibroblasts to produce new collagen over several months. The PLLA is gradually absorbed while leaving behind a matrix of your own collagen, providing natural-looking volume restoration.",
     benefits: [
@@ -99,7 +111,7 @@ const treatments = [
     idealCandidates: "Sculptra is ideal for patients with significant facial volume loss who prefer gradual, natural-looking improvement over immediate dramatic change. It's perfect for those planning ahead—patients willing to undergo a series of treatments for long-lasting results.",
     whatToExpect: "Treatment involves a series of sessions (typically 3) spaced 4-6 weeks apart. Each session takes 30-45 minutes. Results are not immediate—improvement develops gradually over 2-3 months as collagen builds. Patience is required but rewarded.",
     recovery: "Massage the treated area as instructed (typically 5 minutes, 5 times daily, for 5 days) to distribute the product evenly. Mild swelling for 2-3 days. Initial volume from the water carrier subsides quickly; true results emerge over months and last 2+ years.",
-    image: sculptraBeforeAfter
+    beforeAfter: sculptraBeforeAfter
   }
 ];
 
@@ -161,10 +173,21 @@ const AmericanFillers = () => {
                   {treatment.name}
                 </h3>
                 
-                {"image" in treatment && treatment.image && (
+                {treatment.image && (
                   <div className="mb-8">
                     <img
                       src={treatment.image}
+                      alt={`${treatment.name} treatment in action`}
+                      className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
+                
+                {"beforeAfter" in treatment && treatment.beforeAfter && (
+                  <div className="mb-8">
+                    <p className="text-sm text-muted-foreground mb-2 font-medium">Before & After Results:</p>
+                    <img
+                      src={treatment.beforeAfter}
                       alt={`${treatment.name} before and after results`}
                       className="w-full rounded-lg shadow-lg"
                     />

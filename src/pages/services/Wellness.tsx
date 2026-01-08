@@ -1,10 +1,14 @@
 import { Heart, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
+import thermivaImg from "@/assets/treatments/thermiva-wellness.jpg";
+import oshotImg from "@/assets/treatments/oshot-consultation.jpg";
+import pshotImg from "@/assets/treatments/pshot-consultation.jpg";
 
 const treatments = [
   {
     name: "Thermiva",
+    image: thermivaImg,
     overview: "Thermiva is a non-invasive radiofrequency treatment designed for feminine wellness and vaginal rejuvenation. Using controlled thermal energy, Thermiva addresses common concerns including vaginal laxity, dryness, mild incontinence, and decreased sensation—all without surgery, downtime, or discomfort.",
     howItWorks: "Thermiva delivers temperature-controlled radiofrequency energy to vaginal and vulvar tissues using a specialized, comfortable handpiece. The thermal energy heats tissue to precise temperatures that stimulate collagen production and tissue tightening without causing damage. The body responds by generating new collagen and improving blood flow to treated areas.",
     benefits: [
@@ -21,6 +25,7 @@ const treatments = [
   },
   {
     name: "O-Shot (Orgasm Shot)",
+    image: oshotImg,
     overview: "The O-Shot is a revolutionary platelet-rich plasma (PRP) treatment designed to enhance feminine sexual wellness. By injecting PRP derived from your own blood into specific areas, the O-Shot stimulates tissue regeneration, improves blood flow, and enhances sensitivity—naturally improving intimate satisfaction.",
     howItWorks: "Blood is drawn and processed to concentrate platelet-rich plasma containing growth factors. This PRP is then injected into the clitoral and vaginal areas using a very fine needle. The growth factors stimulate stem cell activation, new blood vessel formation, and tissue regeneration. This results in improved sensitivity, lubrication, and overall intimate function.",
     benefits: [
@@ -37,6 +42,7 @@ const treatments = [
   },
   {
     name: "P-Shot (Priapus Shot)",
+    image: pshotImg,
     overview: "The P-Shot is an innovative platelet-rich plasma therapy designed for male intimate wellness and enhancement. By harnessing the regenerative power of your own growth factors, the P-Shot can improve firmness, sensation, and overall intimate function—naturally and without synthetic medications.",
     howItWorks: "Your blood is drawn and processed to extract concentrated platelet-rich plasma rich in growth factors. This PRP is then injected into specific areas using a numbing technique that ensures comfort. The growth factors stimulate tissue regeneration, increase blood flow, and promote new blood vessel formation, resulting in improved function and sensation.",
     benefits: [
@@ -110,6 +116,16 @@ const Wellness = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                {treatment.image && (
+                  <div className="mb-8">
+                    <img
+                      src={treatment.image}
+                      alt={`${treatment.name} wellness consultation`}
+                      className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>
