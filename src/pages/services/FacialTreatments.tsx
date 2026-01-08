@@ -2,7 +2,7 @@ import { Sparkles, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 
-import chemicalPeelsImg from "@/assets/treatment-chemical-peels.jpeg";
+import chemicalPeelsImg from "@/assets/treatment-chemical-peels-new.jpg";
 import microneedlingImg from "@/assets/treatment-microneedling.jpeg";
 import prpImg from "@/assets/treatment-prp-new.jpg";
 import prfImg from "@/assets/treatment-prf-new.jpg";
