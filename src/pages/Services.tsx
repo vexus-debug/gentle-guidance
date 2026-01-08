@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, Sparkles, Syringe, Droplet, Award, CircleDot, Z
 import Layout from "@/components/layout/Layout";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/gallery/consultation-markings.jpg";
 
 const serviceCategories = [
   {
@@ -145,8 +146,7 @@ const Services = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${heroImage})`,
           }}
         />
         <div className="hero-overlay" />

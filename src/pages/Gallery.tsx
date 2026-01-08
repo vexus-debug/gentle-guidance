@@ -2,89 +2,65 @@ import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { cn } from "@/lib/utils";
 
+import facialTreatmentDevice from "@/assets/gallery/facial-treatment-device.jpg";
+import glowingResult from "@/assets/gallery/glowing-result.jpg";
+import prfTreatment from "@/assets/gallery/prf-treatment.jpg";
+import consultationMarkings from "@/assets/gallery/consultation-markings.jpg";
+import botoxInjection from "@/assets/gallery/botox-injection.jpg";
+import foreheadInjection from "@/assets/gallery/forehead-injection.jpg";
+import beforeAfter from "@/assets/gallery/before-after.jpg";
+
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
     { id: "all", name: "All" },
-    { id: "spa", name: "Our Spa" },
     { id: "treatments", name: "Treatments" },
-    { id: "training", name: "Training" },
     { id: "results", name: "Results" },
   ];
 
   const galleryItems = [
     {
       id: 1,
-      category: "spa",
-      title: "Treatment Room",
-      image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80",
+      category: "treatments",
+      title: "Facial Treatment with Device",
+      image: facialTreatmentDevice,
     },
     {
       id: 2,
-      category: "treatments",
-      title: "Facial Treatment",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+      category: "results",
+      title: "Glowing Skin Result",
+      image: glowingResult,
     },
     {
       id: 3,
-      category: "spa",
-      title: "Relaxation Area",
-      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+      category: "treatments",
+      title: "PRF Biotherapy",
+      image: prfTreatment,
     },
     {
       id: 4,
       category: "treatments",
-      title: "Massage Therapy",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+      title: "Consultation & Markings",
+      image: consultationMarkings,
     },
     {
       id: 5,
-      category: "training",
-      title: "Training Session",
-      image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=800&q=80",
+      category: "treatments",
+      title: "Botox Injection",
+      image: botoxInjection,
     },
     {
       id: 6,
-      category: "spa",
-      title: "Premium Products",
-      image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80",
+      category: "treatments",
+      title: "Forehead Treatment",
+      image: foreheadInjection,
     },
     {
       id: 7,
       category: "results",
-      title: "Glowing Skin",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 8,
-      category: "treatments",
-      title: "Body Treatment",
-      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 9,
-      category: "training",
-      title: "Practical Learning",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 10,
-      category: "results",
-      title: "Radiant Results",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 11,
-      category: "spa",
-      title: "Serene Environment",
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 12,
-      category: "training",
-      title: "Certificate Ceremony",
-      image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80",
+      title: "Before & After",
+      image: beforeAfter,
     },
   ];
 
@@ -100,8 +76,7 @@ const Gallery = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${facialTreatmentDevice})`,
           }}
         />
         <div className="hero-overlay" />

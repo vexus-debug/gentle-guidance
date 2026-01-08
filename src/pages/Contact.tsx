@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import heroImage from "@/assets/gallery/glowing-result.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -67,8 +68,7 @@ const Contact = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${heroImage})`,
           }}
         />
         <div className="hero-overlay" />

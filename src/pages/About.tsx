@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Award, Heart, Sparkles, GraduationCap, Users, Target } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import aboutProfessional from "@/assets/about-professional.jpg";
+import heroImage from "@/assets/gallery/forehead-injection.jpg";
 
 const About = () => {
   const values = [
@@ -44,8 +45,7 @@ const About = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${heroImage})`,
           }}
         />
         <div className="hero-overlay" />

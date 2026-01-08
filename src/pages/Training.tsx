@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { GraduationCap, Award, Users, Clock, CheckCircle, Star } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import heroImage from "@/assets/gallery/botox-injection.jpg";
 
 const Training = () => {
   const courses = [
@@ -106,8 +107,7 @@ const Training = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80')",
+            backgroundImage: `url(${heroImage})`,
           }}
         />
         <div className="hero-overlay" />
