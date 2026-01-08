@@ -65,6 +65,7 @@ const Testimonials = () => {
           }}
         />
         <div className="hero-overlay" />
+        <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 text-center text-white px-4">
           <p className="subheading text-white/80 mb-4">Client Love</p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-wide">
@@ -74,8 +75,9 @@ const Testimonials = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-12 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="py-12 glossy-dark text-secondary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 oily-sheen" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -92,11 +94,12 @@ const Testimonials = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 glossy-surface">
         <div className="container mx-auto px-4 text-center max-w-3xl">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-6">
             Real Stories, Real Results
           </h2>
+          <div className="divider-elegant" />
           <p className="text-muted-foreground leading-relaxed">
             Our clients' satisfaction is our greatest achievement. Read what they
             have to say about their experience at Flawless Med Spa.
@@ -105,18 +108,18 @@ const Testimonials = () => {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-8 md:py-16 bg-muted">
+      <section className="py-8 md:py-16 bg-muted oily-sheen">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-card p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="glass-card p-8 transition-all duration-500 hover:shadow-xl"
               >
-                <Quote className="w-10 h-10 text-primary/30 mb-4" />
+                <Quote className="w-10 h-10 text-primary/30 mb-4 relative z-10" />
 
                 {/* Rating */}
-                <div className="flex items-center gap-1 mb-4">
+                <div className="flex items-center gap-1 mb-4 relative z-10">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
@@ -127,17 +130,19 @@ const Testimonials = () => {
                 </div>
 
                 {/* Text */}
-                <p className="text-muted-foreground leading-relaxed mb-6 italic">
+                <p className="text-muted-foreground leading-relaxed mb-6 italic relative z-10">
                   "{testimonial.text}"
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center gap-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                <div className="flex items-center gap-4 relative z-10">
+                  <div className="glossy-frame rounded-full overflow-hidden">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-12 h-12 object-cover"
+                    />
+                  </div>
                   <div>
                     <p className="font-medium text-secondary">
                       {testimonial.name}
@@ -154,7 +159,7 @@ const Testimonials = () => {
       </section>
 
       {/* Review CTA */}
-      <section className="py-16 bg-background">
+      <section className="py-16 glossy-surface">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-6">
             Share Your Experience
@@ -172,7 +177,7 @@ const Testimonials = () => {
             </a>
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-secondary text-secondary text-sm uppercase tracking-[0.2em] font-medium hover:bg-secondary hover:text-secondary-foreground transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 pearl-border text-secondary text-sm uppercase tracking-[0.2em] font-medium hover:bg-secondary hover:text-secondary-foreground transition-all duration-500"
             >
               Review Us on Google
             </a>
@@ -181,8 +186,9 @@ const Testimonials = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 glossy-dark text-secondary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 oily-sheen" />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-serif text-4xl md:text-5xl mb-6">
             Join Our Happy Clients
           </h2>

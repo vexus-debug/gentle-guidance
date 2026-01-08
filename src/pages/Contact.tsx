@@ -71,6 +71,7 @@ const Contact = () => {
           }}
         />
         <div className="hero-overlay" />
+        <div className="absolute inset-0 oily-sheen" />
         <div className="relative z-10 text-center text-white px-4">
           <p className="subheading text-white/80 mb-4">Get in Touch</p>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-wide">
@@ -80,7 +81,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 glossy-surface">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Contact Info */}
@@ -89,6 +90,7 @@ const Contact = () => {
               <h2 className="font-serif text-4xl md:text-5xl text-secondary mb-6">
                 We'd Love to Hear from You
               </h2>
+              <div className="divider-elegant !mx-0" />
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Whether you have questions about our services, want to book an
                 appointment, or just want to say hello, we're here for you.
@@ -98,7 +100,7 @@ const Contact = () => {
               <div className="space-y-6 mb-8">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full flex-shrink-0">
+                    <div className="glossy-icon flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -128,6 +130,9 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 btn-luxury bg-green-600 hover:bg-green-700"
+                style={{
+                  background: 'linear-gradient(145deg, hsl(142 70% 35%) 0%, hsl(142 70% 30%) 50%, hsl(142 70% 35%) 100%)',
+                }}
               >
                 <MessageCircle size={18} />
                 Chat on WhatsApp
@@ -135,11 +140,11 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-card p-8 md:p-10 shadow-sm">
-              <h3 className="font-serif text-2xl text-secondary mb-6">
+            <div className="glass-card p-8 md:p-10">
+              <h3 className="font-serif text-2xl text-secondary mb-6 relative z-10">
                 Send Us a Message
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div>
                   <label
                     htmlFor="name"
@@ -156,7 +161,7 @@ const Contact = () => {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     required
-                    className="bg-background border-border focus:border-primary"
+                    className="bg-background border-border focus:border-primary pearl-border"
                   />
                 </div>
 
@@ -176,7 +181,7 @@ const Contact = () => {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     required
-                    className="bg-background border-border focus:border-primary"
+                    className="bg-background border-border focus:border-primary pearl-border"
                   />
                 </div>
 
@@ -195,7 +200,7 @@ const Contact = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="bg-background border-border focus:border-primary"
+                    className="bg-background border-border focus:border-primary pearl-border"
                   />
                 </div>
 
@@ -215,7 +220,7 @@ const Contact = () => {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     required
-                    className="bg-background border-border focus:border-primary resize-none"
+                    className="bg-background border-border focus:border-primary resize-none pearl-border"
                   />
                 </div>
 
@@ -238,11 +243,13 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="h-[400px] bg-muted relative">
+      <section className="h-[400px] bg-muted relative oily-sheen">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-            <p className="text-muted-foreground">
+          <div className="text-center glass-card p-8">
+            <div className="glossy-icon w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <MapPin className="w-8 h-8 text-primary" />
+            </div>
+            <p className="text-muted-foreground relative z-10">
               123 Beauty Lane, Suite 100
               <br />
               Beverly Hills, CA 90210
@@ -251,7 +258,7 @@ const Contact = () => {
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 text-primary text-sm uppercase tracking-[0.1em] hover:underline"
+              className="inline-block mt-4 text-primary text-sm uppercase tracking-[0.1em] hover:underline relative z-10"
             >
               Open in Google Maps →
             </a>
