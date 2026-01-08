@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Phone } from "lucide-react";
+import { Menu, Phone, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import MobileNav from "./MobileNav";
 
 const Header = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -18,7 +19,21 @@ const Header = () => {
     { name: "Contact", path: "/contact" },
   ];
 
+  const serviceSubLinks = [
+    { name: "American Fillers", path: "/services/american-fillers" },
+    { name: "American Toxins", path: "/services/american-toxins" },
+    { name: "Korean Fillers", path: "/services/korean-fillers" },
+    { name: "Korean Injectables", path: "/services/korean-injectables" },
+    { name: "Skin Boosters", path: "/services/skin-boosters" },
+    { name: "Facial Treatments", path: "/services/facial-treatments" },
+    { name: "Body Sculpting", path: "/services/body-sculpting" },
+    { name: "IV Therapy", path: "/services/iv-therapy" },
+    { name: "Wellness", path: "/services/wellness" },
+    { name: "Aesthetics Training", path: "/services/aesthetics-training" },
+  ];
+
   const isActive = (path: string) => location.pathname === path;
+  const isServiceActive = () => location.pathname.startsWith("/services");
 
   return (
     <>
@@ -35,19 +50,62 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-6">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={cn(
-                    "text-xs uppercase tracking-[0.12em] transition-all duration-500 hover:text-primary relative",
-                    isActive(link.path) ? "text-primary" : "text-foreground/80"
-                  )}
-                >
-                  {link.name}
-                  {isActive(link.path) && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-                  )}
-                </Link>
+                link.name === "Services" ? (
+                  <div
+                    key={link.path}
+                    className="relative"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    <Link
+                      to={link.path}
+                      className={cn(
+                        "text-xs uppercase tracking-[0.12em] transition-all duration-500 hover:text-primary relative flex items-center gap-1",
+                        isServiceActive() ? "text-primary" : "text-foreground/80"
+                      )}
+                    >
+                      {link.name}
+                      <ChevronDown size={12} className={cn("transition-transform", servicesOpen && "rotate-180")} />
+                      {isServiceActive() && (
+                        <span className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+                      )}
+                    </Link>
+                    
+                    {/* Dropdown Menu */}
+                    {servicesOpen && (
+                      <div className="absolute top-full left-0 pt-2 w-56">
+                        <div className="bg-background border border-border rounded-lg shadow-lg py-2">
+                          {serviceSubLinks.map((subLink) => (
+                            <Link
+                              key={subLink.path}
+                              to={subLink.path}
+                              className={cn(
+                                "block px-4 py-2 text-sm transition-colors hover:bg-muted hover:text-primary",
+                                isActive(subLink.path) ? "text-primary bg-muted/50" : "text-foreground/80"
+                              )}
+                            >
+                              {subLink.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={cn(
+                      "text-xs uppercase tracking-[0.12em] transition-all duration-500 hover:text-primary relative",
+                      isActive(link.path) ? "text-primary" : "text-foreground/80"
+                    )}
+                  >
+                    {link.name}
+                    {isActive(link.path) && (
+                      <span className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+                    )}
+                  </Link>
+                )
               ))}
             </nav>
 
