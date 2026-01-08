@@ -1,10 +1,17 @@
 import { Zap, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
+import exosomesImg from "@/assets/treatments/exosomes-treatment.jpg";
+import profhiloImg from "@/assets/treatments/profhilo-injection.jpg";
+import nctfImg from "@/assets/treatments/nctf-mesotherapy.jpg";
+import mesohyalImg from "@/assets/treatments/mesohyal-hydration.jpg";
+import sunekosImg from "@/assets/treatments/sunekos-periorbital.jpg";
+import dermahealImg from "@/assets/treatments/dermaheal-microneedling.jpg";
 
 const treatments = [
   {
     name: "Exosomes",
+    image: exosomesImg,
     overview: "Exosome therapy represents the cutting edge of regenerative aesthetics, utilizing nano-sized vesicles derived from stem cells to communicate directly with your skin cells. These powerful messengers carry growth factors, proteins, and genetic information that instruct cells to regenerate, repair, and rejuvenate at the deepest level.",
     howItWorks: "Exosomes are extracellular vesicles (30-150nm) that serve as intercellular messengers. When applied to the skin—typically after microneedling or laser treatment—they penetrate deeply and deliver their cargo of growth factors, cytokines, and RNA to target cells. This cellular communication triggers enhanced collagen production, faster healing, and improved skin quality from within.",
     benefits: [
@@ -21,6 +28,7 @@ const treatments = [
   },
   {
     name: "Profhilo",
+    image: profhiloImg,
     overview: "Profhilo is a revolutionary bio-remodeling injectable containing one of the highest concentrations of hyaluronic acid on the market. Unlike traditional fillers that add volume, Profhilo works by deeply hydrating the skin from within while stimulating collagen and elastin production, resulting in tissue tightening and improved skin quality.",
     howItWorks: "Profhilo uses a unique stabilized hyaluronic acid complex without chemical cross-linking. When injected at specific Bio Aesthetic Points (BAP technique), it disperses across a wide area, integrating into the dermal architecture. The slow release of HA stimulates fibroblasts to produce collagen and elastin, while providing intense hydration to surrounding tissue.",
     benefits: [
@@ -37,6 +45,7 @@ const treatments = [
   },
   {
     name: "NCTF (New Cellular Treatment Factor)",
+    image: nctfImg,
     overview: "NCTF is a sophisticated mesotherapy solution containing over 50 revitalizing ingredients including hyaluronic acid, vitamins, amino acids, minerals, and coenzymes. This comprehensive cocktail delivers everything your skin needs for optimal cellular function, addressing aging at its source by nourishing cells directly.",
     howItWorks: "NCTF is delivered into the dermis through multiple superficial injections or with microneedling. The formula provides cells with essential building blocks for healthy function: hyaluronic acid for hydration, amino acids for protein synthesis, vitamins for enzymatic reactions, and minerals for cellular metabolism. This comprehensive nourishment revitalizes tired, depleted skin.",
     benefits: [
@@ -53,6 +62,7 @@ const treatments = [
   },
   {
     name: "Mesohyal",
+    image: mesohyalImg,
     overview: "Mesohyal is a premium mesotherapy line offering targeted injectable solutions for intensive skin moisturization and revitalization. These highly purified hyaluronic acid-based formulas are designed for superficial microinjections, providing deep hydration and improving skin quality, texture, and overall appearance.",
     howItWorks: "Mesohyal products contain non-cross-linked hyaluronic acid that, when injected superficially into the dermis, acts as a powerful hydrating agent. The HA binds water, instantly plumping and hydrating the skin while stimulating fibroblast activity. Different formulations target specific concerns—from fine lines to overall revitalization.",
     benefits: [
@@ -69,6 +79,7 @@ const treatments = [
   },
   {
     name: "Sunekos 200",
+    image: sunekosImg,
     overview: "Sunekos 200 is a patented formula combining specific amino acids with hyaluronic acid to stimulate the production of both collagen and elastin in the skin. Unlike treatments that only boost collagen, Sunekos uniquely targets the extracellular matrix (ECM), restoring the fundamental scaffolding that keeps skin firm and elastic.",
     howItWorks: "Sunekos contains a patented amino acid formula that, combined with HA, activates fibroblasts to produce new collagen and—uniquely—elastin. This dual stimulation regenerates the extracellular matrix, the structural framework of skin. The treatment essentially rebuilds the skin's foundation rather than just adding superficial improvement.",
     benefits: [
@@ -85,6 +96,7 @@ const treatments = [
   },
   {
     name: "Derma Heal",
+    image: dermahealImg,
     overview: "Derma Heal is an advanced growth factor treatment utilizing biomimetic peptides and active ingredients to target specific skin concerns. From anti-aging to scar reduction, Derma Heal offers specialized formulations that communicate with skin cells to accelerate healing, stimulate regeneration, and improve overall skin condition.",
     howItWorks: "Derma Heal products contain concentrated growth factors and biomimetic peptides that mimic natural cellular signaling. When delivered into the skin via mesotherapy or microneedling, these active molecules trigger specific cellular responses—increased collagen production, accelerated healing, reduced inflammation, and enhanced cell turnover.",
     benefits: [
@@ -158,6 +170,16 @@ const SkinBoosters = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                {treatment.image && (
+                  <div className="mb-8">
+                    <img
+                      src={treatment.image}
+                      alt={`${treatment.name} treatment in action`}
+                      className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>

@@ -1,10 +1,17 @@
 import { Droplets, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
+import glutathioneImg from "@/assets/treatments/glutathione-iv.jpg";
+import antiagingImg from "@/assets/treatments/antiaging-iv.jpg";
+import brighteningImg from "@/assets/treatments/brightening-iv.jpg";
+import hangoverImg from "@/assets/treatments/hangover-iv.jpg";
+import energyImg from "@/assets/treatments/energy-iv.jpg";
+import detoxImg from "@/assets/treatments/detox-iv.jpg";
 
 const treatments = [
   {
     name: "Glutathione IV Therapy",
+    image: glutathioneImg,
     overview: "Glutathione IV therapy delivers the body's most powerful antioxidant directly into your bloodstream. Known as the 'master antioxidant,' glutathione plays a crucial role in detoxification, immune function, and skin health. When administered intravenously, it bypasses digestive absorption issues, providing maximum cellular benefits including the highly sought-after skin brightening effect.",
     howItWorks: "Glutathione (GSH) is infused directly into the bloodstream via IV, achieving plasma levels impossible through oral supplementation. Once in circulation, it neutralizes free radicals, supports liver detoxification, recycles other antioxidants like vitamins C and E, and inhibits melanin production. The melanin inhibition is responsible for the gradual skin lightening effect many patients seek.",
     benefits: [
@@ -21,6 +28,7 @@ const treatments = [
   },
   {
     name: "Anti-aging Infusion",
+    image: antiagingImg,
     overview: "Our Anti-aging IV Infusion delivers a potent blend of vitamins, antioxidants, and nutrients specifically formulated to combat aging at the cellular level. This comprehensive drip addresses oxidative stress, supports collagen production, enhances cellular repair, and provides the building blocks for youthful vitality from the inside out.",
     howItWorks: "The infusion typically contains high-dose vitamin C, B-complex vitamins, glutathione, amino acids, and minerals that support cellular health and collagen synthesis. Delivered intravenously, these nutrients achieve therapeutic blood levels that support mitochondrial function, reduce oxidative damage, and provide cells with optimal resources for repair and regeneration.",
     benefits: [
@@ -37,6 +45,7 @@ const treatments = [
   },
   {
     name: "Brightening Infusion",
+    image: brighteningImg,
     overview: "The Brightening IV Infusion is specifically formulated to enhance skin radiance, even out skin tone, and promote a luminous complexion. Combining high-dose vitamin C, glutathione, and other skin-supporting nutrients, this drip targets the mechanisms of pigmentation while providing comprehensive antioxidant protection.",
     howItWorks: "The infusion delivers skin-specific nutrients directly to your bloodstream. High-dose vitamin C inhibits tyrosinase (the enzyme that produces melanin) and supports collagen synthesis. Glutathione further suppresses melanin production while providing antioxidant protection. Together, they work synergistically to brighten skin and prevent new pigmentation.",
     benefits: [
@@ -53,6 +62,7 @@ const treatments = [
   },
   {
     name: "Hangover Infusion",
+    image: hangoverImg,
     overview: "The Hangover IV Infusion is your rapid recovery solution after overindulgence. This targeted drip quickly rehydrates, replenishes depleted nutrients, and alleviates symptoms like headache, nausea, and fatigue. Feel restored and functional in under an hour instead of suffering through a day of misery.",
     howItWorks: "Alcohol depletes fluids, vitamins (especially B vitamins), and electrolytes while producing toxic byproducts. The Hangover Infusion delivers rapid IV hydration with saline, B-complex vitamins to restore depleted levels, anti-nausea medication, anti-inflammatory agents for headache, and antioxidants to neutralize toxins. Direct IV delivery means faster relief than oral remedies.",
     benefits: [
@@ -69,6 +79,7 @@ const treatments = [
   },
   {
     name: "Energy Boosters Infusion",
+    image: energyImg,
     overview: "The Energy Boosters IV Infusion delivers a powerful blend of B-vitamins, amino acids, and energizing nutrients directly into your bloodstream for sustained energy and mental clarity. Unlike caffeine or stimulants, this drip provides cellular fuel that supports natural energy production without crashes or jitters.",
     howItWorks: "B-vitamins (especially B12) are essential for cellular energy production. The infusion delivers high concentrations of the entire B-complex, along with amino acids that support neurotransmitter function, and magnesium for muscle and nerve function. This combination optimizes mitochondrial function—your cells' energy powerhouses—for sustained, natural energy.",
     benefits: [
@@ -85,6 +96,7 @@ const treatments = [
   },
   {
     name: "Detoxification Infusion",
+    image: detoxImg,
     overview: "The Detoxification IV Infusion supports your body's natural cleansing processes by providing the liver and cells with essential nutrients for optimal detoxification. This comprehensive drip helps eliminate accumulated toxins, supports organ function, and leaves you feeling cleansed, refreshed, and revitalized.",
     howItWorks: "The liver is your primary detoxification organ, and it requires specific nutrients to function optimally. This infusion delivers glutathione (essential for liver detox pathways), high-dose vitamin C, B-vitamins, and minerals that support Phase I and Phase II liver detoxification. The result is enhanced toxin elimination and reduced toxic burden on cells.",
     benefits: [
@@ -158,6 +170,16 @@ const IVTherapy = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                {treatment.image && (
+                  <div className="mb-8">
+                    <img
+                      src={treatment.image}
+                      alt={`${treatment.name} treatment in action`}
+                      className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>
