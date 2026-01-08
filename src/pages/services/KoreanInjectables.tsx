@@ -2,9 +2,16 @@ import { Syringe, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 
+import innotoxImg from "@/assets/korean-innotox.jpg";
+import huntoxImg from "@/assets/korean-huntox.jpg";
+import nabotaImg from "@/assets/korean-nabota.jpg";
+import neuroxinImg from "@/assets/korean-neuroxin.jpg";
+import botulaxImg from "@/assets/korean-botulax.jpg";
+
 const treatments = [
   {
     name: "Innotox Botulinum Toxin",
+    image: innotoxImg,
     overview: "Innotox is a revolutionary Korean botulinum toxin that comes in a ready-to-use liquid form, eliminating the need for reconstitution. This unique formulation ensures exceptional consistency and precision in every treatment, delivering reliable, natural-looking results for wrinkle reduction and facial rejuvenation.",
     howItWorks: "Unlike traditional freeze-dried toxins, Innotox arrives as a stabilized liquid, ensuring exact dosing without dilution variations. When injected into targeted muscles, it blocks nerve signals that cause muscle contractions, temporarily relaxing the muscles responsible for dynamic wrinkles. The liquid formulation allows for more precise control and even distribution.",
     benefits: [
@@ -21,6 +28,7 @@ const treatments = [
   },
   {
     name: "Huntox",
+    image: huntoxImg,
     overview: "Huntox is a high-purity Korean botulinum toxin renowned for its exceptional manufacturing standards and natural-looking results. Produced using advanced purification techniques, Huntox delivers smooth, even muscle relaxation while preserving natural facial expressions.",
     howItWorks: "Huntox contains highly purified botulinum toxin type A that works by blocking acetylcholine release at neuromuscular junctions. This interruption prevents muscle contraction signals, causing temporary relaxation of treated muscles. The high purity minimizes the risk of antibody formation, maintaining long-term effectiveness.",
     benefits: [
@@ -37,6 +45,7 @@ const treatments = [
   },
   {
     name: "Nabota",
+    image: nabotaImg,
     overview: "Nabota is an FDA-approved Korean botulinum toxin recognized globally for its exceptional quality and efficacy. Known for its excellent spread characteristics and long-lasting wrinkle reduction, Nabota has become a trusted choice for practitioners and patients worldwide.",
     howItWorks: "Nabota utilizes a proprietary purification process that produces a highly refined botulinum toxin with optimal molecular weight. When injected, it spreads evenly within the muscle, providing consistent relaxation across the treatment area. This uniform distribution results in smooth, natural-looking wrinkle reduction.",
     benefits: [
@@ -53,6 +62,7 @@ const treatments = [
   },
   {
     name: "Neuroxin",
+    image: neuroxinImg,
     overview: "Neuroxin is a premium Korean botulinum toxin celebrated for its smooth, even distribution and exceptional ability to preserve natural facial expressions. This sophisticated formulation is designed for practitioners who demand precision and patients who prioritize natural-looking results.",
     howItWorks: "Neuroxin features an optimized molecular structure that allows for controlled diffusion within targeted muscles. This controlled spread ensures comprehensive muscle relaxation while minimizing migration to adjacent areas. The result is precise treatment of dynamic wrinkles without the 'frozen' appearance.",
     benefits: [
@@ -69,6 +79,7 @@ const treatments = [
   },
   {
     name: "Botulax",
+    image: botulaxImg,
     overview: "Botulax is a widely-used Korean botulinum toxin known for its reliability and effectiveness in treating dynamic wrinkles and lines. With extensive clinical use across Asia and growing global popularity, Botulax offers a cost-effective solution without compromising on quality or results.",
     howItWorks: "Botulax contains purified botulinum toxin type A that temporarily blocks neurotransmitter release at the neuromuscular junction. By preventing acetylcholine from triggering muscle contractions, treated muscles relax, smoothing overlying wrinkles. The effect is temporary, lasting several months before muscle activity gradually returns.",
     benefits: [
@@ -142,6 +153,14 @@ const KoreanInjectables = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden mb-6">
+                  <img 
+                    src={treatment.image} 
+                    alt={treatment.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>
