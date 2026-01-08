@@ -1,29 +1,9 @@
 import { Link } from "react-router-dom";
 import { Award, Heart, Sparkles, GraduationCap, Users, Target } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import aboutProfessional from "@/assets/about-professional.jpg";
 
 const About = () => {
-  const team = [
-    {
-      name: "Lead Aesthetician",
-      title: "Spa Director",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
-      bio: "Experienced aesthetician specializing in advanced facial treatments and skin rejuvenation.",
-    },
-    {
-      name: "Senior Therapist",
-      title: "Massage & Body Specialist",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
-      bio: "Expert in therapeutic massage and body contouring treatments with years of experience.",
-    },
-    {
-      name: "Training Director",
-      title: "Lead Instructor",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",
-      bio: "Certified trainer dedicated to developing the next generation of beauty professionals.",
-    },
-  ];
-
   const values = [
     {
       icon: Sparkles,
@@ -84,7 +64,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="glossy-frame">
               <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                src={aboutProfessional}
                 alt="ZealAesthetics Institute & Spa"
                 className="w-full aspect-[4/5] object-cover"
               />
@@ -168,38 +148,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 md:py-32 bg-muted oily-sheen">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="subheading mb-4">Meet Our Team</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-secondary">
-              Dedicated Professionals
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="group">
-                <div className="aspect-[3/4] overflow-hidden mb-6 glossy-frame">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="font-serif text-2xl text-secondary mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-primary text-sm uppercase tracking-[0.1em] mb-3">
-                  {member.title}
-                </p>
-                <p className="text-muted-foreground text-sm">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us */}
       <section className="py-20 md:py-32 glossy-surface">
