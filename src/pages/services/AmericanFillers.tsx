@@ -1,6 +1,7 @@
 import { CircleDot, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
+import sculptraBeforeAfter from "@/assets/sculptra-before-after.jpg";
 
 const treatments = [
   {
@@ -97,7 +98,8 @@ const treatments = [
     ],
     idealCandidates: "Sculptra is ideal for patients with significant facial volume loss who prefer gradual, natural-looking improvement over immediate dramatic change. It's perfect for those planning ahead—patients willing to undergo a series of treatments for long-lasting results.",
     whatToExpect: "Treatment involves a series of sessions (typically 3) spaced 4-6 weeks apart. Each session takes 30-45 minutes. Results are not immediate—improvement develops gradually over 2-3 months as collagen builds. Patience is required but rewarded.",
-    recovery: "Massage the treated area as instructed (typically 5 minutes, 5 times daily, for 5 days) to distribute the product evenly. Mild swelling for 2-3 days. Initial volume from the water carrier subsides quickly; true results emerge over months and last 2+ years."
+    recovery: "Massage the treated area as instructed (typically 5 minutes, 5 times daily, for 5 days) to distribute the product evenly. Mild swelling for 2-3 days. Initial volume from the water carrier subsides quickly; true results emerge over months and last 2+ years.",
+    image: sculptraBeforeAfter
   }
 ];
 
@@ -158,6 +160,16 @@ const AmericanFillers = () => {
                 <h3 className="font-serif text-2xl md:text-3xl text-secondary mb-6">
                   {treatment.name}
                 </h3>
+                
+                {"image" in treatment && treatment.image && (
+                  <div className="mb-8">
+                    <img
+                      src={treatment.image}
+                      alt={`${treatment.name} before and after results`}
+                      className="w-full rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
                 
                 <div className="space-y-6 text-muted-foreground">
                   <div>
