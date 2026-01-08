@@ -64,18 +64,22 @@ const Footer = () => {
             <h4 className="text-sm uppercase tracking-[0.2em] mb-6">Services</h4>
             <nav className="space-y-3">
               {[
-                "Facial Treatments",
-                "Massage Therapy",
-                "Body Treatments",
-                "Advanced Aesthetics",
-                "Skin Concerns",
+                { name: "American Fillers", path: "/services/american-fillers" },
+                { name: "American Toxins", path: "/services/american-toxins" },
+                { name: "Korean Fillers", path: "/services/korean-fillers" },
+                { name: "Korean Injectables", path: "/services/korean-injectables" },
+                { name: "Skin Boosters", path: "/services/skin-boosters" },
+                { name: "Facial Treatments", path: "/services/facial-treatments" },
+                { name: "Body Sculpting", path: "/services/body-sculpting" },
+                { name: "IV Therapy", path: "/services/iv-therapy" },
+                { name: "Wellness", path: "/services/wellness" },
               ].map((service) => (
                 <Link
-                  key={service}
-                  to="/services"
+                  key={service.path}
+                  to={service.path}
                   className="block text-white/70 hover:text-white transition-colors duration-300 text-sm"
                 >
-                  {service}
+                  {service.name}
                 </Link>
               ))}
             </nav>
