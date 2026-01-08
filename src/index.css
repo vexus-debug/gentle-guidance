@@ -122,7 +122,7 @@
 
   /* Luxury button style - Glossy wet look */
   .btn-luxury {
-    @apply relative bg-secondary text-secondary-foreground px-8 py-4 text-sm uppercase tracking-[0.15em] font-medium transition-all duration-500 overflow-hidden inline-flex items-center justify-center text-center;
+    @apply relative bg-secondary text-white px-8 py-4 text-sm uppercase tracking-[0.15em] font-medium transition-all duration-500 overflow-hidden inline-flex items-center justify-center text-center;
     background: linear-gradient(
       145deg,
       hsl(var(--secondary)) 0%,
