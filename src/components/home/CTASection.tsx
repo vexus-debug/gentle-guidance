@@ -17,7 +17,7 @@ const CTASection = () => {
           Ready to Embrace Your Natural Beauty?
         </h2>
         <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-          Whether you're seeking premium spa treatments tailored for melanin-rich skin 
+          Whether you're seeking premium spa treatments tailored to your unique needs 
           or professional training to launch your career, ZealAesthetics is here to 
           help you achieve your goals.
         </p>

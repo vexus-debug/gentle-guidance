@@ -7,19 +7,18 @@ const WelcomeSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <p className="subheading mb-4">Our Story</p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-secondary mb-6">
-            A Sanctuary for <span className="text-primary">Black Beauty</span>
+            Your Sanctuary for <span className="text-primary">Timeless Beauty</span>
           </h2>
           <div className="divider-elegant" />
           <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-            At ZealAesthetics, we understand that melanin-rich skin has unique needs that deserve 
-            specialized attention and expertise. Founded with a deep passion for celebrating Black beauty, 
-            our spa is more than a treatment center — it's a haven where you can embrace your natural 
-            radiance while receiving care that truly understands your skin.
+            At ZealAesthetics, we believe every individual deserves personalized attention and expert care. 
+            Our spa is more than a treatment center — it's a haven where you can embrace your natural 
+            radiance while receiving care that truly understands your unique needs.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg mb-12">
-            Our team of skilled aestheticians are trained specifically in treatments designed for 
-            darker skin tones, using products formulated to address concerns like hyperpigmentation, 
-            melasma, and uneven skin tone without causing harm or irritation.
+            Our team of skilled aestheticians are trained in the latest techniques and use 
+            premium products to address a wide range of concerns, delivering visible results 
+            with the utmost care and professionalism.
           </p>
 
           {/* Three Pillars */}
@@ -29,10 +28,10 @@ const WelcomeSection = () => {
                 <Heart className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-serif text-xl text-secondary mb-2 relative z-10">
-                Culturally Conscious
+                Client-Centered Care
               </h3>
               <p className="text-sm text-muted-foreground relative z-10">
-                We celebrate and understand the unique beauty of Black women
+                We celebrate and understand your unique beauty and wellness goals
               </p>
             </div>
 
@@ -41,10 +40,10 @@ const WelcomeSection = () => {
                 <Leaf className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-serif text-xl text-secondary mb-2 relative z-10">
-                Melanin-Safe Products
+                Premium Products
               </h3>
               <p className="text-sm text-muted-foreground relative z-10">
-                Premium formulations specifically designed for darker skin tones
+                Carefully selected formulations for safe, effective results
               </p>
             </div>
 
@@ -56,7 +55,7 @@ const WelcomeSection = () => {
                 Expert Care
               </h3>
               <p className="text-sm text-muted-foreground relative z-10">
-                Trained professionals who specialize in treating melanin-rich skin
+                Trained professionals dedicated to delivering exceptional results
               </p>
             </div>
           </div>

@@ -3,23 +3,23 @@ import { Check, Shield, Award, Users, Sparkles, Clock } from "lucide-react";
 const features = [
   {
     icon: Shield,
-    title: "Safe for Melanin-Rich Skin",
-    description: "Every treatment is carefully curated to be safe and effective for darker skin tones, avoiding risks like scarring or hyperpigmentation.",
+    title: "Safe & Effective Treatments",
+    description: "Every treatment is carefully curated to be safe and effective, using proven techniques that deliver visible results.",
   },
   {
     icon: Award,
     title: "Certified Expertise",
-    description: "Our aestheticians hold specialized certifications in treating Black skin and stay updated with the latest techniques.",
+    description: "Our aestheticians hold specialized certifications and stay updated with the latest industry techniques and innovations.",
   },
   {
     icon: Sparkles,
     title: "Premium Products",
-    description: "We use only the finest products specifically formulated for melanin-rich skin, ensuring optimal results without irritation.",
+    description: "We use only the finest products from trusted brands, ensuring optimal results without irritation.",
   },
   {
     icon: Users,
-    title: "Inclusive Environment",
-    description: "A welcoming space where Black women feel understood, celebrated, and pampered from the moment they walk in.",
+    title: "Welcoming Environment",
+    description: "A warm and inviting space where every client feels understood, celebrated, and pampered from the moment they walk in.",
   },
   {
     icon: Check,
@@ -29,7 +29,7 @@ const features = [
   {
     icon: Clock,
     title: "Personalized Approach",
-    description: "Every treatment plan is customized to your unique skin concerns, goals, and lifestyle for lasting results.",
+    description: "Every treatment plan is customized to your unique concerns, goals, and lifestyle for lasting results.",
   },
 ];
 
@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto text-lg">
             We don't just offer spa treatments — we provide a transformative experience 
-            designed specifically for the unique beauty of Black women.
+            designed to help you look and feel your absolute best.
           </p>
         </div>
 

@@ -24,8 +24,7 @@ const TrainingPreview = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Our comprehensive training programs are designed to equip you with the skills 
               and knowledge needed to excel in the beauty and aesthetics industry. Learn from 
-              experienced professionals in a hands-on environment with a focus on treating 
-              melanin-rich skin.
+              experienced professionals in a hands-on environment with real-world techniques.
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {trainingFeatures.map((item, index) => (

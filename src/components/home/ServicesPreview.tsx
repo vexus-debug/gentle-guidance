@@ -8,7 +8,7 @@ const services = [
   {
     title: "Facial Treatments",
     description:
-      "Customized facials targeting acne, melasma, hyperpigmentation, and more. Our treatments are specifically designed for melanin-rich skin to reveal your natural radiance.",
+      "Customized facials targeting acne, fine lines, uneven tone, and more. Our treatments are tailored to your unique needs to reveal your natural radiance.",
     image: serviceFacial,
   },
   {
@@ -20,7 +20,7 @@ const services = [
   {
     title: "Advanced Aesthetics",
     description:
-      "Microneedling, fat dissolving treatments, and other advanced procedures performed safely on darker skin tones for visible, lasting results.",
+      "Microneedling, fat dissolving treatments, and other advanced procedures performed with precision for visible, lasting results.",
     image: serviceAdvanced,
   },
 ];
@@ -35,7 +35,7 @@ const ServicesPreview = () => {
             Signature Services
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Every treatment is tailored for melanin-rich skin, combining luxury with 
+            Every treatment is personalized to your needs, combining luxury with 
             science-backed results.
           </p>
         </div>
