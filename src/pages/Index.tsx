@@ -1,16 +1,16 @@
 import Layout from "@/components/layout/Layout";
 import HeroSlideshow from "@/components/home/HeroSlideshow";
-import WelcomeSection from "@/components/home/WelcomeSection";
-import DualPillars from "@/components/home/DualPillars";
-import ServicesPreview from "@/components/home/ServicesPreview";
-import StatsSection from "@/components/home/StatsSection";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
-import TrainingPreview from "@/components/home/TrainingPreview";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import FAQSection from "@/components/home/FAQSection";
-import LocationSection from "@/components/home/LocationSection";
-import CTASection from "@/components/home/CTASection";
 import ScrollReveal from "@/components/ScrollReveal";
+import {
+  WelcomeEmbrace,
+  BeautyDestinations,
+  TransformationArt,
+  NurturingExpertise,
+  VoicesOfConfidence,
+  MeetYourGuides,
+  CredentialsTrust,
+  BeginJourney,
+} from "@/components/home/journey";
 
 const Index = () => {
   return (
@@ -18,43 +18,35 @@ const Index = () => {
       <HeroSlideshow />
       
       <ScrollReveal animation="fade-up">
-        <WelcomeSection />
-      </ScrollReveal>
-      
-      <ScrollReveal animation="zoom-in" delay={100}>
-        <DualPillars />
-      </ScrollReveal>
-      
-      <ScrollReveal animation="fade-up">
-        <ServicesPreview />
-      </ScrollReveal>
-      
-      <ScrollReveal animation="zoom-in">
-        <StatsSection />
+        <WelcomeEmbrace />
       </ScrollReveal>
       
       <ScrollReveal animation="fade-up" delay={100}>
-        <WhyChooseUs />
-      </ScrollReveal>
-      
-      <ScrollReveal animation="fade-left">
-        <TrainingPreview />
+        <BeautyDestinations />
       </ScrollReveal>
       
       <ScrollReveal animation="fade-up">
-        <TestimonialsSection />
+        <TransformationArt />
       </ScrollReveal>
       
       <ScrollReveal animation="zoom-in">
-        <FAQSection />
+        <NurturingExpertise />
+      </ScrollReveal>
+      
+      <ScrollReveal animation="fade-up" delay={100}>
+        <VoicesOfConfidence />
       </ScrollReveal>
       
       <ScrollReveal animation="fade-up">
-        <LocationSection />
+        <MeetYourGuides />
+      </ScrollReveal>
+      
+      <ScrollReveal animation="fade-up">
+        <CredentialsTrust />
       </ScrollReveal>
       
       <ScrollReveal animation="zoom-in" delay={100}>
-        <CTASection />
+        <BeginJourney />
       </ScrollReveal>
     </Layout>
   );
