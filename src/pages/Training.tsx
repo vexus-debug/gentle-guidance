@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { GraduationCap, Award, Users, Clock, CheckCircle, Star } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import heroImage from "@/assets/gallery/botox-injection.jpg";
+import aestheticTrainingImg from "@/assets/training/aesthetic-training.jpg";
+import skincareFormulationImg from "@/assets/training/skincare-formulation.jpg";
+import spaTherapyImg from "@/assets/training/spa-therapy.jpg";
+import advancedSkincareImg from "@/assets/training/advanced-skincare.jpg";
 
 const Training = () => {
   const courses = [
@@ -9,7 +13,7 @@ const Training = () => {
       title: "Aesthetic Training Program",
       description: "Comprehensive training in modern aesthetic procedures and techniques.",
       duration: "8-12 Weeks",
-      image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=800&q=80",
+      image: aestheticTrainingImg,
       highlights: [
         "Facial analysis and consultation skills",
         "Advanced facial treatments",
@@ -22,7 +26,7 @@ const Training = () => {
       title: "Clinical Skincare Product Development",
       description: "Learn to formulate and develop professional skincare products.",
       duration: "6-8 Weeks",
-      image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80",
+      image: skincareFormulationImg,
       highlights: [
         "Ingredient science and formulation",
         "Product safety and regulations",
@@ -35,7 +39,7 @@ const Training = () => {
       title: "Beauty & Spa Therapy",
       description: "Complete training in spa services including facials, waxing, and massage.",
       duration: "10-14 Weeks",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+      image: spaTherapyImg,
       highlights: [
         "Facial treatment techniques",
         "Professional waxing methods",
@@ -48,7 +52,7 @@ const Training = () => {
       title: "Advanced Skincare Techniques",
       description: "Specialized course for experienced practitioners looking to advance their skills.",
       duration: "4-6 Weeks",
-      image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80",
+      image: advancedSkincareImg,
       highlights: [
         "Advanced treatment modalities",
         "Treating complex skin conditions",
