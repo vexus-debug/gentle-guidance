@@ -2,7 +2,7 @@ import { Droplet, MessageCircle } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 
-import fillerLipInjection from "@/assets/filler-lip-injection.jpg";
+import revolaxLipInjection from "@/assets/revolax-lip-injection.jpg";
 import fillerCheekVolumization from "@/assets/filler-cheek-volumization.jpg";
 import fillerJawlineContouring from "@/assets/filler-jawline-contouring.jpg";
 import fillerFacialInjection from "@/assets/filler-facial-injection.jpg";
@@ -11,7 +11,7 @@ import fillerGentleTreatment from "@/assets/filler-gentle-treatment.jpg";
 const treatments = [
   {
     name: "Revolax",
-    image: fillerLipInjection,
+    image: revolaxLipInjection,
     overview: "Revolax is a premium Korean hyaluronic acid dermal filler celebrated for its exceptionally smooth consistency and natural tissue integration. Available in multiple densities, Revolax provides versatile solutions from fine line correction to deep volume restoration, delivering natural-looking results that move with your expressions.",
     howItWorks: "Revolax features high-purity, cross-linked hyaluronic acid that integrates seamlessly with surrounding tissue. The unique cross-linking technology creates a cohesive gel that resists breakdown while remaining soft and pliable. When injected, it attracts water molecules, providing both immediate volumization and ongoing hydration to treated areas.",
     benefits: [
