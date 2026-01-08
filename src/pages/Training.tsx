@@ -197,7 +197,7 @@ const Training = () => {
                     href="https://wa.me/2349015012285?text=Hello%2C%20I%20am%20interested%20in%20the%20training%20program"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-luxury"
+                    className="btn-luxury w-full sm:w-auto"
                   >
                     Inquire About This Course
                   </a>
@@ -295,7 +295,7 @@ const Training = () => {
               href="https://wa.me/2349015012285?text=Hello%2C%20I%20am%20interested%20in%20enrolling%20in%20a%20training%20program"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-luxury bg-white text-secondary"
+              className="btn-luxury bg-white text-secondary w-full sm:w-auto"
             >
               Enroll Now via WhatsApp
             </a>
