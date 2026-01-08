@@ -238,7 +238,7 @@ const Services = () => {
             href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-luxury bg-white text-secondary"
+            className="btn-luxury bg-white text-secondary w-full sm:w-auto"
           >
             Schedule Free Consultation
           </a>

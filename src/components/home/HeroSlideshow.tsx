@@ -66,7 +66,7 @@ const HeroSlideshow = () => {
             href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-luxury bg-spa-gold text-secondary hover:bg-spa-gold/90"
+            className="btn-luxury bg-spa-gold text-white hover:bg-spa-gold/90"
           >
             Book Your Experience
           </a>
