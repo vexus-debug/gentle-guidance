@@ -6,15 +6,15 @@ const WelcomeEmbrace = () => {
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Organic blob background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-spa-beige/40 to-transparent blur-3xl transform translate-x-1/3 -translate-y-1/4" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-primary/10 to-transparent blur-3xl transform -translate-x-1/4 translate-y-1/4" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-spa-beige/40 dark:from-spa-beige/20 to-transparent blur-3xl transform translate-x-1/3 -translate-y-1/4" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-primary/10 dark:from-primary/5 to-transparent blur-3xl transform -translate-x-1/4 translate-y-1/4" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <p className="subheading mb-6 animate-fade-in">Welcome to ZealAesthetics</p>
           
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-secondary mb-8 leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-secondary dark:text-foreground mb-8 leading-tight">
             Step Into Your <span className="text-primary italic">Sanctuary</span>
           </h2>
           
@@ -50,7 +50,7 @@ const WelcomeEmbrace = () => {
         >
           <path 
             d="M0,60 C300,100 600,20 900,60 C1050,80 1150,70 1200,60 L1200,120 L0,120 Z" 
-            className="fill-muted/30"
+            className="fill-muted/30 dark:fill-muted/20"
           />
         </svg>
       </div>

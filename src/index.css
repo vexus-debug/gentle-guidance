@@ -63,37 +63,56 @@
   }
 
   .dark {
-    --background: 25 25% 10%;
-    --foreground: 40 30% 95%;
+    /* Deep espresso/chocolate backgrounds with warm undertones */
+    --background: 20 30% 8%;
+    --foreground: 35 30% 92%;
 
-    --card: 25 25% 12%;
-    --card-foreground: 40 30% 95%;
+    /* Rich chocolate card surfaces */
+    --card: 22 28% 12%;
+    --card-foreground: 35 28% 90%;
 
-    --popover: 25 25% 12%;
-    --popover-foreground: 40 30% 95%;
+    --popover: 22 28% 14%;
+    --popover-foreground: 35 28% 90%;
 
-    --primary: 25 30% 65%;
-    --primary-foreground: 25 25% 10%;
+    /* Gold becomes the hero accent in dark mode */
+    --primary: 42 75% 55%;
+    --primary-foreground: 20 30% 8%;
 
-    --secondary: 35 25% 80%;
-    --secondary-foreground: 25 25% 10%;
+    /* Warm bronze secondary */
+    --secondary: 28 45% 55%;
+    --secondary-foreground: 35 30% 95%;
 
-    --muted: 25 20% 18%;
-    --muted-foreground: 35 20% 65%;
+    /* Deep muted with warmth */
+    --muted: 22 25% 16%;
+    --muted-foreground: 35 25% 65%;
 
-    --accent: 20 35% 70%;
-    --accent-foreground: 25 25% 10%;
+    /* Bronze accent */
+    --accent: 28 50% 60%;
+    --accent-foreground: 20 30% 10%;
 
-    --destructive: 0 62% 30%;
+    --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 25 20% 20%;
-    --input: 25 20% 20%;
-    --ring: 25 30% 65%;
+    /* Warm borders */
+    --border: 25 20% 22%;
+    --input: 25 20% 22%;
+    --ring: 42 75% 55%;
 
-    --glossy-highlight: 0 0% 100%;
-    --glossy-shimmer: 38 60% 65%;
-    --glossy-pearl: 30 30% 25%;
+    /* Glossy effects for dark mode */
+    --glossy-highlight: 35 30% 95%;
+    --glossy-shimmer: 42 70% 60%;
+    --glossy-pearl: 22 25% 18%;
+
+    /* Spa colors adapted for dark mode */
+    --spa-cream: 25 25% 14%;
+    --spa-taupe: 25 35% 50%;
+    --spa-rose: 15 40% 55%;
+    --spa-chocolate: 20 45% 28%;
+    --spa-gold: 42 80% 58%;
+    --spa-beige: 30 25% 22%;
+    --spa-terracotta: 18 50% 50%;
+    --spa-bronze: 28 50% 58%;
+    --spa-earth: 20 40% 40%;
   }
 }
 

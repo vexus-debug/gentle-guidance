@@ -9,7 +9,7 @@ const TransformationArt = () => {
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Soft organic background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-spa-beige/30 to-transparent blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-spa-beige/30 dark:from-spa-beige/10 to-transparent blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -23,7 +23,7 @@ const TransformationArt = () => {
                 alt="Transformation result"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 dark:from-background/30 to-transparent" />
             </div>
             
             {/* Overlapping smaller image */}
@@ -45,13 +45,13 @@ const TransformationArt = () => {
             </div>
             
             {/* Decorative circle */}
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full border-2 border-primary/20 hidden lg:block" />
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 rounded-full border-2 border-primary/20 dark:border-primary/30 hidden lg:block" />
           </div>
           
           {/* Content */}
           <div className="lg:pl-8">
             <p className="subheading mb-4">The Art of Transformation</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-secondary mb-6 leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl text-secondary dark:text-foreground mb-6 leading-tight">
               Witness the <span className="text-primary italic">Magic</span> of Expert Care
             </h2>
             

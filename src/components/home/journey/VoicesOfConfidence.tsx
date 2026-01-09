@@ -30,14 +30,14 @@ const VoicesOfConfidence = () => {
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Soft background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-spa-beige/30 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-tl from-primary/10 to-transparent blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-spa-beige/30 dark:from-spa-beige/10 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-tl from-primary/10 dark:from-primary/5 to-transparent blur-3xl" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <p className="subheading mb-4">Voices of Confidence</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-secondary mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl text-secondary dark:text-foreground mb-6">
             Real Stories, Real <span className="text-primary italic">Radiance</span>
           </h2>
           <div className="w-20 h-[2px] mx-auto bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
@@ -47,11 +47,11 @@ const VoicesOfConfidence = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative bg-gradient-to-br from-card to-spa-beige/30 rounded-3xl p-8 shadow-lg border border-border/50"
+              className="relative bg-gradient-to-br from-card to-spa-beige/30 dark:from-card dark:to-spa-beige/10 rounded-3xl p-8 shadow-lg border border-border/50"
             >
               {/* Quote icon */}
               <div className="absolute -top-4 left-8 w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-lg">
-                <Quote className="w-4 h-4 text-white" />
+                <Quote className="w-4 h-4 text-primary-foreground" />
               </div>
               
               {/* Content */}
@@ -69,7 +69,7 @@ const VoicesOfConfidence = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="font-serif text-lg text-secondary">{testimonial.name}</h4>
+                    <h4 className="font-serif text-lg text-secondary dark:text-foreground">{testimonial.name}</h4>
                     <p className="text-xs text-muted-foreground">{testimonial.treatment}</p>
                   </div>
                 </div>

@@ -25,9 +25,9 @@ const credentials = [
 
 const CredentialsTrust = () => {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-r from-muted/40 via-background to-muted/40">
+    <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-r from-muted/40 via-background to-muted/40 dark:from-muted/20 dark:via-background dark:to-muted/20">
       {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
+      <div className="absolute inset-0 opacity-5 dark:opacity-[0.03] pointer-events-none">
         <div 
           className="absolute inset-0" 
           style={{
@@ -40,7 +40,7 @@ const CredentialsTrust = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-14">
           <p className="subheading mb-4">Credentials & Trust</p>
-          <h2 className="font-serif text-3xl md:text-4xl text-secondary mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl text-secondary dark:text-foreground mb-4">
             Your Safety, Our <span className="text-primary italic">Promise</span>
           </h2>
           <div className="w-16 h-[2px] mx-auto bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
@@ -52,10 +52,10 @@ const CredentialsTrust = () => {
               key={index}
               className="text-center group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/15 to-spa-gold/10 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/15 to-spa-gold/10 dark:from-primary/20 dark:to-spa-gold/15 mb-6 group-hover:scale-110 transition-transform duration-300">
                 <credential.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="font-serif text-lg text-secondary mb-2">{credential.title}</h3>
+              <h3 className="font-serif text-lg text-secondary dark:text-foreground mb-2">{credential.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{credential.description}</p>
             </div>
           ))}
@@ -63,9 +63,9 @@ const CredentialsTrust = () => {
         
         {/* Trust banner */}
         <div className="mt-16 text-center">
-          <div className="inline-flex flex-wrap justify-center items-center gap-x-8 gap-y-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-card via-spa-beige/30 to-card border border-border/50">
+          <div className="inline-flex flex-wrap justify-center items-center gap-x-8 gap-y-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-card via-spa-beige/30 dark:via-spa-beige/10 to-card border border-border/50">
             <span className="text-sm text-muted-foreground">Trusted by</span>
-            <span className="font-serif text-xl text-secondary">2,500+ Happy Clients</span>
+            <span className="font-serif text-xl text-secondary dark:text-foreground">2,500+ Happy Clients</span>
             <span className="text-sm text-muted-foreground">in Nigeria & Beyond</span>
           </div>
         </div>
