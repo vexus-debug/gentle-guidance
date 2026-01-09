@@ -2,117 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Flawless Med Spa Design System
-   Luxury feminine aesthetic with glossy, oily feel
-   All colors in HSL format
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Warm cream background - Earth & Gold palette */
-    --background: 38 40% 96%;
-    --foreground: 20 30% 18%;
+    --background: 30 30% 98%;
+    --foreground: 25 25% 15%;
 
-    /* Cards with warm ivory tones */
-    --card: 40 35% 97%;
-    --card-foreground: 20 30% 18%;
+    --card: 30 25% 96%;
+    --card-foreground: 25 25% 15%;
 
-    --popover: 40 35% 97%;
-    --popover-foreground: 20 30% 18%;
+    --popover: 30 30% 98%;
+    --popover-foreground: 25 25% 15%;
 
-    /* Primary: Rich terracotta - Afrocentric warmth */
-    --primary: 18 55% 45%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 25 30% 25%;
+    --primary-foreground: 30 30% 98%;
 
-    /* Secondary: Deep earth brown */
-    --secondary: 20 45% 22%;
-    --secondary-foreground: 40 35% 95%;
+    --secondary: 30 20% 92%;
+    --secondary-foreground: 25 25% 20%;
 
-    /* Muted: Soft sand for subtle backgrounds */
-    --muted: 35 30% 90%;
-    --muted-foreground: 20 20% 40%;
+    --muted: 30 15% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    /* Accent: Warm bronze/copper */
-    --accent: 28 50% 55%;
-    --accent-foreground: 20 45% 15%;
+    --accent: 38 45% 55%;
+    --accent-foreground: 25 30% 15%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 30 25% 82%;
-    --input: 30 25% 82%;
-    --ring: 18 55% 45%;
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 38 45% 55%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
-    /* Custom spa colors - Earth & Gold Afrocentric palette */
-    --spa-cream: 38 40% 96%;
-    --spa-taupe: 25 35% 55%;
-    --spa-rose: 15 40% 60%;
-    --spa-chocolate: 20 50% 20%;
-    --spa-gold: 42 75% 50%;
-    --spa-beige: 35 35% 85%;
-    --spa-terracotta: 18 55% 45%;
-    --spa-bronze: 28 50% 55%;
-    --spa-earth: 20 45% 30%;
+    /* Spa Brand Colors - Light Mode */
+    --spa-cream: 35 40% 96%;
+    --spa-taupe: 30 15% 70%;
+    --spa-rose: 350 40% 75%;
+    --spa-chocolate: 25 35% 25%;
+    --spa-gold: 38 60% 55%;
+    --spa-beige: 35 30% 90%;
 
-    /* Glossy effect colors */
-    --glossy-highlight: 0 0% 100%;
-    --glossy-shimmer: 42 75% 65%;
-    --glossy-pearl: 38 35% 94%;
+    --sidebar-background: 30 25% 96%;
+    --sidebar-foreground: 25 25% 25%;
+    --sidebar-primary: 25 30% 25%;
+    --sidebar-primary-foreground: 30 30% 98%;
+    --sidebar-accent: 30 20% 92%;
+    --sidebar-accent-foreground: 25 25% 20%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 38 45% 55%;
   }
 
   .dark {
-    /* Deep espresso/chocolate backgrounds with warm undertones */
-    --background: 20 30% 8%;
-    --foreground: 35 30% 92%;
+    --background: 25 25% 8%;
+    --foreground: 35 25% 92%;
 
-    /* Rich chocolate card surfaces */
-    --card: 22 28% 12%;
-    --card-foreground: 35 28% 90%;
+    --card: 25 20% 12%;
+    --card-foreground: 35 25% 92%;
 
-    --popover: 22 28% 14%;
-    --popover-foreground: 35 28% 90%;
+    --popover: 25 20% 10%;
+    --popover-foreground: 35 25% 92%;
 
-    /* Gold becomes the hero accent in dark mode */
-    --primary: 42 75% 55%;
-    --primary-foreground: 20 30% 8%;
+    --primary: 38 55% 60%;
+    --primary-foreground: 25 25% 10%;
 
-    /* Warm bronze secondary */
-    --secondary: 28 45% 55%;
-    --secondary-foreground: 35 30% 95%;
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 35 25% 88%;
 
-    /* Deep muted with warmth */
-    --muted: 22 25% 16%;
-    --muted-foreground: 35 25% 65%;
+    --muted: 25 15% 20%;
+    --muted-foreground: 30 15% 60%;
 
-    /* Bronze accent */
-    --accent: 28 50% 60%;
-    --accent-foreground: 20 30% 10%;
+    --accent: 38 50% 50%;
+    --accent-foreground: 25 25% 10%;
 
-    --destructive: 0 62% 40%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 210 40% 98%;
 
-    /* Warm borders */
-    --border: 25 20% 22%;
-    --input: 25 20% 22%;
-    --ring: 42 75% 55%;
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 38 55% 60%;
 
-    /* Glossy effects for dark mode */
-    --glossy-highlight: 35 30% 95%;
-    --glossy-shimmer: 42 70% 60%;
-    --glossy-pearl: 22 25% 18%;
+    /* Spa Brand Colors - Dark Mode (Elegant with Gold Accents) */
+    --spa-cream: 25 15% 15%;
+    --spa-taupe: 25 10% 35%;
+    --spa-rose: 350 30% 55%;
+    --spa-chocolate: 30 20% 45%;
+    --spa-gold: 42 70% 58%;
+    --spa-beige: 25 12% 20%;
 
-    /* Spa colors adapted for dark mode */
-    --spa-cream: 25 25% 14%;
-    --spa-taupe: 25 35% 50%;
-    --spa-rose: 15 40% 55%;
-    --spa-chocolate: 20 45% 28%;
-    --spa-gold: 42 80% 58%;
-    --spa-beige: 30 25% 22%;
-    --spa-terracotta: 18 50% 50%;
-    --spa-bronze: 28 50% 58%;
-    --spa-earth: 20 40% 40%;
+    --sidebar-background: 25 20% 10%;
+    --sidebar-foreground: 35 25% 90%;
+    --sidebar-primary: 38 55% 60%;
+    --sidebar-primary-foreground: 25 25% 10%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 35 25% 88%;
+    --sidebar-border: 25 15% 22%;
+    --sidebar-ring: 38 55% 60%;
   }
 }
 
@@ -122,325 +110,6 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    @apply font-normal tracking-wide;
-  }
-}
-
-@layer components {
-  /* Elegant subheading style */
-  .subheading {
-    @apply text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium;
-    font-family: 'Inter', sans-serif;
-  }
-
-  /* Luxury button style - Glossy wet look */
-  .btn-luxury {
-    @apply relative bg-secondary text-white px-8 py-4 text-sm uppercase tracking-[0.15em] font-medium transition-all duration-500 overflow-hidden inline-flex items-center justify-center text-center;
-    background: linear-gradient(
-      145deg,
-      hsl(var(--secondary)) 0%,
-      hsl(25 35% 30%) 50%,
-      hsl(var(--secondary)) 100%
-    );
-    box-shadow: 
-      0 4px 15px -3px hsl(var(--secondary) / 0.4),
-      inset 0 1px 0 hsl(var(--glossy-highlight) / 0.15),
-      inset 0 -1px 0 hsl(0 0% 0% / 0.2);
-  }
-
-  .btn-luxury::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(var(--glossy-highlight) / 0.2) 50%,
-      transparent 100%
-    );
-    transition: left 0.6s ease;
-  }
-
-  .btn-luxury:hover::before {
-    left: 100%;
-  }
-
-  .btn-luxury:hover {
-    box-shadow: 
-      0 6px 20px -3px hsl(var(--secondary) / 0.5),
-      inset 0 1px 0 hsl(var(--glossy-highlight) / 0.25),
-      inset 0 -1px 0 hsl(0 0% 0% / 0.2);
-    transform: translateY(-1px);
-  }
-
-  /* Gold accent text */
-  .text-gold {
-    color: hsl(var(--spa-gold));
-  }
-
-  /* Overlay for hero images - Oily iridescent effect */
-  .hero-overlay {
-    @apply absolute inset-0;
-    background: linear-gradient(
-      160deg,
-      hsl(0 0% 0% / 0.3) 0%,
-      hsl(25 30% 20% / 0.2) 30%,
-      hsl(38 60% 55% / 0.1) 50%,
-      hsl(20 35% 40% / 0.3) 70%,
-      hsl(0 0% 0% / 0.5) 100%
-    );
-  }
-
-  /* Elegant divider - glossy */
-  .divider-elegant {
-    @apply w-16 h-px mx-auto my-6;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(var(--primary)) 20%,
-      hsl(var(--glossy-shimmer)) 50%,
-      hsl(var(--primary)) 80%,
-      transparent 100%
-    );
-  }
-
-  /* Glossy glass card */
-  .glass-card {
-    @apply relative overflow-hidden;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--card)) 0%,
-      hsl(var(--glossy-pearl)) 50%,
-      hsl(var(--card)) 100%
-    );
-    box-shadow: 
-      0 8px 32px -8px hsl(var(--secondary) / 0.15),
-      inset 0 1px 0 hsl(var(--glossy-highlight) / 0.5),
-      inset 0 -1px 0 hsl(var(--secondary) / 0.05);
-    backdrop-filter: blur(10px);
-  }
-
-  .glass-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(
-      180deg,
-      hsl(var(--glossy-highlight) / 0.1) 0%,
-      transparent 100%
-    );
-    pointer-events: none;
-  }
-
-  /* Oily sheen animation overlay */
-  .oily-sheen {
-    @apply relative overflow-hidden;
-  }
-
-  .oily-sheen::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      45deg,
-      transparent 40%,
-      hsl(var(--glossy-highlight) / 0.05) 45%,
-      hsl(var(--glossy-shimmer) / 0.1) 50%,
-      hsl(var(--glossy-highlight) / 0.05) 55%,
-      transparent 60%
-    );
-    animation: sheenMove 8s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  /* Glossy surface for sections */
-  .glossy-surface {
-    @apply relative;
-    background: linear-gradient(
-      180deg,
-      hsl(var(--background)) 0%,
-      hsl(var(--glossy-pearl)) 50%,
-      hsl(var(--background)) 100%
-    );
-  }
-
-  .glossy-surface::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(var(--glossy-highlight) / 0.6) 50%,
-      transparent 100%
-    );
-  }
-
-  /* Glossy image frame */
-  .glossy-frame {
-    @apply relative;
-    box-shadow: 
-      0 20px 40px -15px hsl(var(--secondary) / 0.25),
-      inset 0 0 0 1px hsl(var(--glossy-highlight) / 0.2);
-  }
-
-  .glossy-frame::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 30%;
-    background: linear-gradient(
-      180deg,
-      hsl(var(--glossy-highlight) / 0.15) 0%,
-      transparent 100%
-    );
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  /* Wet/oily text effect */
-  .glossy-text {
-    background: linear-gradient(
-      180deg,
-      hsl(var(--foreground)) 0%,
-      hsl(var(--foreground)) 45%,
-      hsl(var(--glossy-shimmer)) 50%,
-      hsl(var(--foreground)) 55%,
-      hsl(var(--foreground)) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Pearl border effect */
-  .pearl-border {
-    border: 1px solid hsl(var(--border));
-    box-shadow: 
-      inset 0 1px 0 hsl(var(--glossy-highlight) / 0.4),
-      0 4px 12px -4px hsl(var(--secondary) / 0.1);
-  }
-
-  /* Stats section glossy */
-  .glossy-dark {
-    @apply relative overflow-hidden;
-    background: linear-gradient(
-      145deg,
-      hsl(var(--secondary)) 0%,
-      hsl(25 40% 20%) 50%,
-      hsl(var(--secondary)) 100%
-    );
-  }
-
-  .glossy-dark::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(
-      180deg,
-      hsl(var(--glossy-highlight) / 0.08) 0%,
-      transparent 100%
-    );
-    pointer-events: none;
-  }
-
-  /* Icon container glossy */
-  .glossy-icon {
-    @apply relative overflow-hidden;
-    background: linear-gradient(
-      145deg,
-      hsl(var(--primary) / 0.15) 0%,
-      hsl(var(--primary) / 0.1) 100%
-    );
-    box-shadow: 
-      inset 0 1px 0 hsl(var(--glossy-highlight) / 0.3),
-      inset 0 -1px 0 hsl(var(--secondary) / 0.1);
-  }
-}
-
-@layer utilities {
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Fade in animation */
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Slide up animation */
-  .animate-slide-up {
-    animation: slideUp 0.5s ease-out forwards;
-  }
-
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Sheen movement animation */
-  @keyframes sheenMove {
-    0%, 100% {
-      transform: translateX(-30%) translateY(-30%) rotate(45deg);
-    }
-    50% {
-      transform: translateX(30%) translateY(30%) rotate(45deg);
-    }
-  }
-
-  /* Shimmer animation */
-  @keyframes shimmer {
-    0% {
-      background-position: -200% center;
-    }
-    100% {
-      background-position: 200% center;
-    }
-  }
-
-  .animate-shimmer {
-    background-size: 200% auto;
-    animation: shimmer 4s linear infinite;
+    @apply bg-background text-foreground;
   }
 }
