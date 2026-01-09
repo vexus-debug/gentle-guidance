@@ -54,15 +54,15 @@ const destinations = [
 
 const BeautyDestinations = () => {
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background dark:from-muted/10 dark:to-background overflow-hidden">
       {/* Organic decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/5 blur-2xl" />
-      <div className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-spa-gold/10 blur-3xl" />
+      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/5 dark:bg-primary/10 blur-2xl" />
+      <div className="absolute bottom-40 right-20 w-48 h-48 rounded-full bg-spa-gold/10 dark:bg-spa-gold/5 blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <p className="subheading mb-4">Your Beauty Destinations</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-secondary mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl text-secondary dark:text-foreground mb-6">
             Find Your Perfect <span className="text-primary italic">Treatment</span>
           </h2>
           <div className="w-20 h-[2px] mx-auto bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
@@ -84,14 +84,14 @@ const BeautyDestinations = () => {
               />
               
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent dark:from-background/95 dark:via-background/40" />
               
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-white mb-3 group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="font-serif text-2xl md:text-3xl text-white dark:text-foreground mb-3 group-hover:translate-y-0 transition-transform duration-300">
                   {destination.title}
                 </h3>
-                <p className="text-white/80 text-sm mb-4 line-clamp-2">
+                <p className="text-white/80 dark:text-muted-foreground text-sm mb-4 line-clamp-2">
                   {destination.description}
                 </p>
                 <div className="flex items-center gap-2 text-spa-gold group-hover:gap-3 transition-all duration-300">

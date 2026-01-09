@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-secondary border-b border-secondary-foreground/10">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-secondary dark:bg-card border-b border-secondary-foreground/10 dark:border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20 relative z-10">
             {/* Logo */}
@@ -74,7 +74,7 @@ const Header = () => {
                     {/* Dropdown Menu */}
                     {servicesOpen && (
                       <div className="absolute top-full left-0 pt-2 w-56">
-                        <div className="bg-background border border-border rounded-lg shadow-lg py-2">
+                        <div className="bg-card dark:bg-card border border-border rounded-lg shadow-lg py-2">
                           {serviceSubLinks.map((subLink) => (
                             <Link
                               key={subLink.path}
