@@ -37,7 +37,7 @@ const BeginJourney = () => {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a 
-              href="tel:+2341234567890" 
+              href="tel:+2349015012285" 
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border-2 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-300 text-sm uppercase tracking-[0.1em]"
             >
               <Phone className="w-4 h-4" />
@@ -50,19 +50,19 @@ const BeginJourney = () => {
             <div className="flex flex-col items-center p-6 rounded-2xl bg-white/70 backdrop-blur-sm shadow-sm">
               <MapPin className="w-5 h-5 text-primary mb-3" />
               <p className="text-sm text-muted-foreground text-center">
-                Lagos, Nigeria
+                33 Tunis Street, Wuse Zone 6<br />Abuja, Nigeria
               </p>
             </div>
             <div className="flex flex-col items-center p-6 rounded-2xl bg-white/70 backdrop-blur-sm shadow-sm">
               <Clock className="w-5 h-5 text-primary mb-3" />
               <p className="text-sm text-muted-foreground text-center">
-                Mon - Sat: 9AM - 6PM
+                Mon – Sat: 10AM – 7PM
               </p>
             </div>
             <div className="flex flex-col items-center p-6 rounded-2xl bg-white/70 backdrop-blur-sm shadow-sm">
               <Phone className="w-5 h-5 text-primary mb-3" />
               <p className="text-sm text-muted-foreground text-center">
-                +234 123 456 7890
+                +234 901 501 2285
               </p>
             </div>
           </div>
