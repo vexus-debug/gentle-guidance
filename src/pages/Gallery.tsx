@@ -25,6 +25,16 @@ import workInProgress7 from "@/assets/gallery/work-in-progress-7.jpg";
 import finishedWork1 from "@/assets/gallery/finished-work-1.jpg";
 import finishedWork2 from "@/assets/gallery/finished-work-2.jpg";
 import finishedWork3 from "@/assets/gallery/finished-work-3.jpg";
+import skincareResult1 from "@/assets/gallery/skincare-result-1.jpg";
+import skincareResult2 from "@/assets/gallery/skincare-result-2.jpg";
+import skincareResult3 from "@/assets/gallery/skincare-result-3.jpg";
+import skincareResult4 from "@/assets/gallery/skincare-result-4.jpg";
+import skincareResult5 from "@/assets/gallery/skincare-result-5.jpg";
+import skincareResult6 from "@/assets/gallery/skincare-result-6.jpg";
+import skincareResult7 from "@/assets/gallery/skincare-result-7.jpg";
+import skincareResult8 from "@/assets/gallery/skincare-result-8.jpg";
+import skincareResult9 from "@/assets/gallery/skincare-result-9.jpg";
+import skincareResult10 from "@/assets/gallery/skincare-result-10.jpg";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -176,6 +186,66 @@ const Gallery = () => {
       category: "finished-work",
       title: "Glowing Results",
       image: finishedWork3,
+    },
+    {
+      id: 24,
+      category: "skincare-results",
+      title: "Hydrated Glowing Skin",
+      image: skincareResult1,
+    },
+    {
+      id: 25,
+      category: "skincare-results",
+      title: "Facial Treatment Result",
+      image: skincareResult2,
+    },
+    {
+      id: 26,
+      category: "skincare-results",
+      title: "Deep Hydration Result",
+      image: skincareResult3,
+    },
+    {
+      id: 27,
+      category: "skincare-results",
+      title: "Chemical Peel Progress",
+      image: skincareResult4,
+    },
+    {
+      id: 28,
+      category: "skincare-results",
+      title: "Skin Renewal Journey",
+      image: skincareResult5,
+    },
+    {
+      id: 29,
+      category: "skincare-results",
+      title: "Post-Treatment Glow",
+      image: skincareResult6,
+    },
+    {
+      id: 30,
+      category: "skincare-results",
+      title: "Skin Transformation",
+      image: skincareResult7,
+    },
+    {
+      id: 31,
+      category: "skincare-results",
+      title: "Radiant Profile",
+      image: skincareResult8,
+    },
+    {
+      id: 32,
+      category: "skincare-results",
+      title: "Fresh Facial Result",
+      image: skincareResult9,
+    },
+    {
+      id: 33,
+      category: "skincare-results",
+      title: "Beautiful Healthy Skin",
+      image: skincareResult10,
     },
   ];
 
