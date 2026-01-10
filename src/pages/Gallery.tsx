@@ -9,6 +9,12 @@ import consultationMarkings from "@/assets/gallery/consultation-markings.jpg";
 import botoxInjection from "@/assets/gallery/botox-injection.jpg";
 import foreheadInjection from "@/assets/gallery/forehead-injection.jpg";
 import beforeAfter from "@/assets/gallery/before-after.jpg";
+import skincareResultFront from "@/assets/gallery/skincare-result-front.jpg";
+import skincareResultLeft from "@/assets/gallery/skincare-result-left.jpg";
+import skincareResultRight from "@/assets/gallery/skincare-result-right.jpg";
+import facialTreatmentSession1 from "@/assets/gallery/facial-treatment-session-1.jpg";
+import facialTreatmentSession2 from "@/assets/gallery/facial-treatment-session-2.jpg";
+import facialTreatmentSession3 from "@/assets/gallery/facial-treatment-session-3.jpg";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -17,6 +23,7 @@ const Gallery = () => {
     { id: "all", name: "All" },
     { id: "treatments", name: "Treatments" },
     { id: "results", name: "Results" },
+    { id: "skincare-results", name: "Skincare Results" },
   ];
 
   const galleryItems = [
@@ -61,6 +68,42 @@ const Gallery = () => {
       category: "results",
       title: "Before & After",
       image: beforeAfter,
+    },
+    {
+      id: 8,
+      category: "skincare-results",
+      title: "Glowing Skin - Front View",
+      image: skincareResultFront,
+    },
+    {
+      id: 9,
+      category: "skincare-results",
+      title: "Glowing Skin - Side Profile",
+      image: skincareResultLeft,
+    },
+    {
+      id: 10,
+      category: "skincare-results",
+      title: "Glowing Skin - Right Profile",
+      image: skincareResultRight,
+    },
+    {
+      id: 11,
+      category: "treatments",
+      title: "Facial Treatment Session",
+      image: facialTreatmentSession1,
+    },
+    {
+      id: 12,
+      category: "treatments",
+      title: "Professional Skincare Application",
+      image: facialTreatmentSession2,
+    },
+    {
+      id: 13,
+      category: "treatments",
+      title: "Expert Facial Massage",
+      image: facialTreatmentSession3,
     },
   ];
 
