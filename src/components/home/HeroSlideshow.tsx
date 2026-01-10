@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
+import consultationMarkings from "@/assets/gallery/consultation-markings.jpg";
+import botoxInjection from "@/assets/gallery/botox-injection.jpg";
+import glowingResult from "@/assets/gallery/glowing-result.jpg";
 
 const heroImages = [
   {
-    src: hero1,
-    alt: "Client enjoying relaxing spa facial treatment",
+    src: consultationMarkings,
+    alt: "Professional aesthetic consultation with facial markings",
   },
   {
-    src: hero2,
-    alt: "Professional aesthetician providing facial treatment",
+    src: botoxInjection,
+    alt: "Expert botox injection treatment",
   },
   {
-    src: hero3,
-    alt: "Luxurious spa interior with elegant ambiance",
+    src: glowingResult,
+    alt: "Beautiful glowing skin result after treatment",
   },
 ];
 
