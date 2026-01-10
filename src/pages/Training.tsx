@@ -6,6 +6,13 @@ import aestheticTrainingImg from "@/assets/training/aesthetic-training.jpg";
 import skincareFormulationImg from "@/assets/training/skincare-formulation.jpg";
 import spaTherapyImg from "@/assets/training/spa-therapy.jpg";
 import advancedSkincareImg from "@/assets/training/advanced-skincare.jpg";
+import trainingSession1 from "@/assets/training/training-session-1.jpg";
+import trainingSession2 from "@/assets/training/training-session-2.jpg";
+import trainingSession3 from "@/assets/training/training-session-3.jpg";
+import trainingSession4 from "@/assets/training/training-session-4.jpg";
+import trainingSession5 from "@/assets/training/training-session-5.jpg";
+import trainingSession6 from "@/assets/training/training-session-6.jpg";
+import trainingSession7 from "@/assets/training/training-session-7.jpg";
 
 const Training = () => {
   const courses = [
@@ -84,6 +91,16 @@ const Training = () => {
       title: "Flexible Scheduling",
       description: "Choose from various class schedules to fit your lifestyle.",
     },
+  ];
+
+  const galleryImages = [
+    { src: trainingSession1, alt: "Hands-on facial treatment training session" },
+    { src: trainingSession2, alt: "Massage therapy practical training" },
+    { src: trainingSession3, alt: "Body sculpting training on mannequin" },
+    { src: trainingSession4, alt: "Training classroom session" },
+    { src: trainingSession5, alt: "Facial treatment demonstration" },
+    { src: trainingSession6, alt: "Professional skincare training" },
+    { src: trainingSession7, alt: "Facial massage technique training" },
   ];
 
   const testimonials = [
@@ -243,8 +260,35 @@ const Training = () => {
         </div>
       </section>
 
-      {/* Enrollment Info */}
+      {/* Training Gallery */}
       <section className="py-16 md:py-24 bg-muted oily-sheen">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="subheading mb-4">In Action</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-secondary">
+              Training Gallery
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="glass-card overflow-hidden group aspect-square"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enrollment Info */}
+      <section className="py-16 md:py-24 glossy-surface">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="subheading mb-4">Enrollment</p>
