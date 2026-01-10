@@ -15,6 +15,16 @@ import skincareResultRight from "@/assets/gallery/skincare-result-right.jpg";
 import facialTreatmentSession1 from "@/assets/gallery/facial-treatment-session-1.jpg";
 import facialTreatmentSession2 from "@/assets/gallery/facial-treatment-session-2.jpg";
 import facialTreatmentSession3 from "@/assets/gallery/facial-treatment-session-3.jpg";
+import workInProgress1 from "@/assets/gallery/work-in-progress-1.jpg";
+import workInProgress2 from "@/assets/gallery/work-in-progress-2.jpg";
+import workInProgress3 from "@/assets/gallery/work-in-progress-3.jpg";
+import workInProgress4 from "@/assets/gallery/work-in-progress-4.jpg";
+import workInProgress5 from "@/assets/gallery/work-in-progress-5.jpg";
+import workInProgress6 from "@/assets/gallery/work-in-progress-6.jpg";
+import workInProgress7 from "@/assets/gallery/work-in-progress-7.jpg";
+import finishedWork1 from "@/assets/gallery/finished-work-1.jpg";
+import finishedWork2 from "@/assets/gallery/finished-work-2.jpg";
+import finishedWork3 from "@/assets/gallery/finished-work-3.jpg";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -24,6 +34,8 @@ const Gallery = () => {
     { id: "treatments", name: "Treatments" },
     { id: "results", name: "Results" },
     { id: "skincare-results", name: "Skincare Results" },
+    { id: "work-in-progress", name: "Work in Progress" },
+    { id: "finished-work", name: "Finished Work" },
   ];
 
   const galleryItems = [
@@ -104,6 +116,66 @@ const Gallery = () => {
       category: "treatments",
       title: "Expert Facial Massage",
       image: facialTreatmentSession3,
+    },
+    {
+      id: 14,
+      category: "work-in-progress",
+      title: "Skin Journey - Day 1",
+      image: workInProgress1,
+    },
+    {
+      id: 15,
+      category: "work-in-progress",
+      title: "Skin Transformation Progress",
+      image: workInProgress2,
+    },
+    {
+      id: 16,
+      category: "work-in-progress",
+      title: "Treatment in Progress",
+      image: workInProgress3,
+    },
+    {
+      id: 17,
+      category: "work-in-progress",
+      title: "Healing Journey",
+      image: workInProgress4,
+    },
+    {
+      id: 18,
+      category: "work-in-progress",
+      title: "Skin Renewal Process",
+      image: workInProgress5,
+    },
+    {
+      id: 19,
+      category: "work-in-progress",
+      title: "Progress Update",
+      image: workInProgress6,
+    },
+    {
+      id: 20,
+      category: "work-in-progress",
+      title: "Continued Improvement",
+      image: workInProgress7,
+    },
+    {
+      id: 21,
+      category: "finished-work",
+      title: "Beautiful Clear Skin",
+      image: finishedWork1,
+    },
+    {
+      id: 22,
+      category: "finished-work",
+      title: "Radiant Transformation",
+      image: finishedWork2,
+    },
+    {
+      id: 23,
+      category: "finished-work",
+      title: "Glowing Results",
+      image: finishedWork3,
     },
   ];
 
