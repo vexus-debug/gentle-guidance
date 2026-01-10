@@ -35,6 +35,15 @@ import skincareResult7 from "@/assets/gallery/skincare-result-7.jpg";
 import skincareResult8 from "@/assets/gallery/skincare-result-8.jpg";
 import skincareResult9 from "@/assets/gallery/skincare-result-9.jpg";
 import skincareResult10 from "@/assets/gallery/skincare-result-10.jpg";
+import treatmentSession1 from "@/assets/gallery/treatment-session-1.jpg";
+import treatmentSession2 from "@/assets/gallery/treatment-session-2.jpg";
+import treatmentSession3 from "@/assets/gallery/treatment-session-3.jpg";
+import treatmentSession4 from "@/assets/gallery/treatment-session-4.jpg";
+import treatmentSession5 from "@/assets/gallery/treatment-session-5.jpg";
+import treatmentSession6 from "@/assets/gallery/treatment-session-6.jpg";
+import treatmentSession7 from "@/assets/gallery/treatment-session-7.jpg";
+import treatmentSession8 from "@/assets/gallery/treatment-session-8.jpg";
+import treatmentSession9 from "@/assets/gallery/treatment-session-9.jpg";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -246,6 +255,60 @@ const Gallery = () => {
       category: "skincare-results",
       title: "Beautiful Healthy Skin",
       image: skincareResult10,
+    },
+    {
+      id: 34,
+      category: "treatments",
+      title: "Professional Facial Treatment",
+      image: treatmentSession1,
+    },
+    {
+      id: 35,
+      category: "treatments",
+      title: "Body Sculpting Session",
+      image: treatmentSession2,
+    },
+    {
+      id: 36,
+      category: "treatments",
+      title: "HydraFacial Treatment",
+      image: treatmentSession3,
+    },
+    {
+      id: 37,
+      category: "treatments",
+      title: "Body Contouring",
+      image: treatmentSession4,
+    },
+    {
+      id: 38,
+      category: "treatments",
+      title: "Lip Filler Injection",
+      image: treatmentSession5,
+    },
+    {
+      id: 39,
+      category: "treatments",
+      title: "Dermal Filler Application",
+      image: treatmentSession6,
+    },
+    {
+      id: 40,
+      category: "treatments",
+      title: "Male Lip Enhancement",
+      image: treatmentSession7,
+    },
+    {
+      id: 41,
+      category: "treatments",
+      title: "Temple Filler Treatment",
+      image: treatmentSession8,
+    },
+    {
+      id: 42,
+      category: "treatments",
+      title: "Aesthetic Practice Session",
+      image: treatmentSession9,
     },
   ];
 
