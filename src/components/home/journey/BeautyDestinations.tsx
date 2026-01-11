@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import facialImage from "@/assets/service-facial.jpg";
-import injectablesImage from "@/assets/botox-treatment.jpg";
-import bodyImage from "@/assets/treatments/body-sculpting.jpg";
-import wellnessImage from "@/assets/treatments/massage-therapy.jpg";
-import ivImage from "@/assets/treatments/energy-iv.jpg";
-import skinBoostersImage from "@/assets/treatments/profhilo-injection.jpg";
+import facialImage from "@/assets/beauty-destinations/facial-rejuvenation.jpg";
+import injectablesImage from "@/assets/beauty-destinations/injectables-fillers.jpg";
+import bodyImage from "@/assets/beauty-destinations/body-sculpting.jpg";
+import wellnessImage from "@/assets/beauty-destinations/wellness-therapies.jpg";
+import ivImage from "@/assets/beauty-destinations/iv-therapy.jpg";
+import skinBoostersImage from "@/assets/beauty-destinations/skin-boosters.jpg";
 
 const destinations = [
   {
