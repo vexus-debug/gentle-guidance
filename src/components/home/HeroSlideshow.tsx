@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import consultationMarkings from "@/assets/gallery/consultation-markings.jpg";
 import botoxInjection from "@/assets/gallery/botox-injection.jpg";
 import glowingResult from "@/assets/gallery/glowing-result.jpg";
@@ -52,30 +50,12 @@ const HeroSlideshow = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-wide mb-6 leading-tight">
-          ELEVATE YOUR <span className="text-spa-gold">NATURAL BEAUTY</span>
+        <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-wide mb-6 leading-none font-medium">
+          BE <span className="text-spa-gold block">FLAWLESS</span>
         </h1>
-        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
-          A luxurious sanctuary dedicated to your beauty and wellness. 
-          Experience premium skincare and aesthetic treatments tailored to your unique needs.
+        <p className="text-sm md:text-base text-white/80 uppercase tracking-[0.3em] font-light">
+          Flawless Aesthetic Center
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://wa.me/2349015012285?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-luxury bg-spa-gold text-white hover:bg-spa-gold/90"
-          >
-            Book Your Experience
-          </a>
-          <Link
-            to="/training"
-            className="flex items-center gap-2 text-white text-sm uppercase tracking-[0.15em] hover:opacity-80 transition-opacity pearl-border px-6 py-3"
-          >
-            Explore Training Programs
-            <ArrowRight size={16} />
-          </Link>
-        </div>
       </div>
 
       {/* Slide Indicators */}
