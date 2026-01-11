@@ -30,7 +30,7 @@ const HeroSlideshow = () => {
   }, []);
 
   return (
-    <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden -mt-20">
+    <section className="relative h-[75vh] md:h-[90vh] min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden -mt-20">
       {/* Background Images with Fade Transition */}
       {heroImages.map((image, index) => (
         <div
