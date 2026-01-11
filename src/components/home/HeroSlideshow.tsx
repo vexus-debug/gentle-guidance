@@ -45,15 +45,13 @@ const HeroSlideshow = () => {
         />
       ))}
       
-      {/* Overlay */}
+      {/* Overlay - darkened for better text visibility */}
+      <div className="absolute inset-0 bg-black/50" />
       <div className="hero-overlay" />
       <div className="absolute inset-0 oily-sheen" />
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <p className="subheading text-white/80 mb-4 animate-fade-in">
-          Welcome to ZealAesthetics
-        </p>
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-wide mb-6 leading-tight">
           ELEVATE YOUR <span className="text-spa-gold">NATURAL BEAUTY</span>
         </h1>
