@@ -51,10 +51,10 @@ const HeroSlideshow = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl tracking-wide mb-6 leading-none font-medium">
-          BE <span className="text-spa-gold block">FLAWLESS</span>
+          ZEAL <span className="text-spa-gold block">AESTHETICS</span>
         </h1>
         <p className="text-sm md:text-base text-white/80 uppercase tracking-[0.3em] font-light">
-          Flawless Aesthetic Center
+          Skin | Health | Beauty
         </p>
       </div>
 
