@@ -1,27 +1,27 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import serviceFacial from "@/assets/service-facial.jpg";
-import serviceMassage from "@/assets/service-massage.jpg";
-import serviceAdvanced from "@/assets/service-advanced.jpg";
+import serviceBotox from "@/assets/service-botox.jpg";
+import serviceUndereyeFiller from "@/assets/service-undereye-filler.jpg";
+import serviceFiller from "@/assets/service-filler.jpg";
 
 const services = [
   {
-    title: "Facial Treatments",
+    title: "Botox Treatments",
     description:
-      "Customized facials targeting acne, fine lines, uneven tone, and more. Our treatments are tailored to your unique needs to reveal your natural radiance.",
-    image: serviceFacial,
+      "Expert botulinum toxin treatments to smooth wrinkles and fine lines. Our skilled practitioners deliver natural-looking results for a refreshed appearance.",
+    image: serviceBotox,
   },
   {
-    title: "Massage Therapy",
+    title: "Under Eye Fillers",
     description:
-      "Relaxing and therapeutic massage treatments to relieve stress, ease muscle tension, and rejuvenate your body and spirit in our serene environment.",
-    image: serviceMassage,
+      "Targeted filler treatments to reduce dark circles, hollows, and tired appearance under the eyes. Restore a youthful, well-rested look.",
+    image: serviceUndereyeFiller,
   },
   {
-    title: "Advanced Aesthetics",
+    title: "Dermal Fillers",
     description:
-      "Microneedling, fat dissolving treatments, and other advanced procedures performed with precision for visible, lasting results.",
-    image: serviceAdvanced,
+      "Premium filler treatments for facial contouring, volume restoration, and enhancement. Achieve beautiful, natural results with our expert injectors.",
+    image: serviceFiller,
   },
 ];
 
