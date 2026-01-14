@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp } from "lucide-react";
 import facialImage from "@/assets/beauty-destinations/facial-rejuvenation.jpg";
 import injectablesImage from "@/assets/beauty-destinations/injectables-fillers.jpg";
 import bodyImage from "@/assets/beauty-destinations/body-sculpting.jpg";
@@ -9,50 +9,59 @@ import skinBoostersImage from "@/assets/beauty-destinations/skin-boosters.jpg";
 
 const destinations = [
   {
-    title: "Facial Rejuvenation",
-    description: "Reveal your skin's luminous potential through expert treatments",
-    image: facialImage,
-    link: "/services/facial-treatments",
-    delay: 0,
-  },
-  {
     title: "Injectables & Fillers",
-    description: "Artful enhancement that celebrates your natural beauty",
+    description: "Artful enhancement that celebrates your natural beauty with premium Korean & American products",
     image: injectablesImage,
     link: "/services/korean-injectables",
-    delay: 100,
+    badge: "Popular",
+    badgeType: "popular",
+    treatmentCount: 15,
+    featured: true,
+  },
+  {
+    title: "Facial Rejuvenation",
+    description: "Reveal your skin's luminous potential",
+    image: facialImage,
+    link: "/services/facial-treatments",
+    treatmentCount: 8,
   },
   {
     title: "Body Sculpting",
-    description: "Contour and refine with precision and care",
+    description: "Contour and refine with precision",
     image: bodyImage,
     link: "/services/body-sculpting",
-    delay: 200,
+    badge: "New",
+    badgeType: "new",
+    treatmentCount: 6,
   },
   {
     title: "Skin Boosters",
-    description: "Deep hydration for a dewy, radiant complexion",
+    description: "Deep hydration for a dewy glow",
     image: skinBoostersImage,
     link: "/services/skin-boosters",
-    delay: 300,
+    treatmentCount: 10,
   },
   {
     title: "Wellness Therapies",
-    description: "Nurture your body, mind, and spirit in harmony",
+    description: "Nurture body, mind, and spirit",
     image: wellnessImage,
     link: "/services/wellness",
-    delay: 400,
+    treatmentCount: 7,
   },
   {
     title: "IV Therapy",
-    description: "Revitalize from within with targeted infusions",
+    description: "Revitalize from within",
     image: ivImage,
     link: "/services/iv-therapy",
-    delay: 500,
+    badge: "Trending",
+    badgeType: "trending",
+    treatmentCount: 12,
   },
 ];
 
 const BeautyDestinations = () => {
+  const [featured, ...others] = destinations;
+  
   return (
     <section className="relative py-24 md:py-32 bg-gradient-to-b from-muted/30 to-background dark:from-muted/10 dark:to-background overflow-hidden">
       {/* Organic decorative elements */}
@@ -68,15 +77,62 @@ const BeautyDestinations = () => {
           <div className="w-20 h-[2px] mx-auto bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((destination, index) => (
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Featured Large Card */}
+          <Link
+            to={featured.link}
+            className="group relative overflow-hidden rounded-3xl md:col-span-2 lg:row-span-2 aspect-[4/3] lg:aspect-auto lg:min-h-[600px] block"
+          >
+            <img
+              src={featured.image}
+              alt={featured.title}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/40 to-secondary/10 dark:from-background/98 dark:via-background/50" />
+            
+            {/* Badge */}
+            {featured.badge && (
+              <div className="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-spa-gold text-secondary text-xs font-semibold uppercase tracking-wider shadow-lg">
+                <Sparkles className="w-3.5 h-3.5" />
+                {featured.badge}
+              </div>
+            )}
+            
+            {/* Content */}
+            <div className="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
+              <div className="max-w-lg">
+                <div className="flex items-center gap-2 text-spa-gold mb-3">
+                  <span className="text-xs uppercase tracking-widest">{featured.treatmentCount}+ treatments</span>
+                </div>
+                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white dark:text-foreground mb-4 group-hover:translate-y-0 transition-transform duration-300">
+                  {featured.title}
+                </h3>
+                <p className="text-white/80 dark:text-muted-foreground text-base lg:text-lg mb-6 max-w-md">
+                  {featured.description}
+                </p>
+                <div className="flex items-center gap-2 text-spa-gold group-hover:gap-4 transition-all duration-300">
+                  <span className="text-sm uppercase tracking-[0.15em] font-medium">Explore Treatments</span>
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+              </div>
+            </div>
+            
+            {/* Hover glow */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+            </div>
+          </Link>
+          
+          {/* Other Cards */}
+          {others.map((destination) => (
             <Link
               key={destination.title}
               to={destination.link}
               className="group relative overflow-hidden rounded-3xl aspect-[4/5] block"
-              style={{ animationDelay: `${destination.delay}ms` }}
             >
-              {/* Image */}
               <img
                 src={destination.image}
                 alt={destination.title}
@@ -86,12 +142,30 @@ const BeautyDestinations = () => {
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent dark:from-background/95 dark:via-background/40" />
               
+              {/* Badge */}
+              {destination.badge && (
+                <div className={`absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-md ${
+                  destination.badgeType === 'popular' 
+                    ? 'bg-spa-gold text-secondary' 
+                    : destination.badgeType === 'new' 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'bg-accent text-accent-foreground'
+                }`}>
+                  {destination.badgeType === 'trending' && <TrendingUp className="w-3 h-3" />}
+                  {destination.badgeType === 'popular' && <Sparkles className="w-3 h-3" />}
+                  {destination.badge}
+                </div>
+              )}
+              
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-8">
-                <h3 className="font-serif text-2xl md:text-3xl text-white dark:text-foreground mb-3 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute inset-0 flex flex-col justify-end p-6">
+                <div className="text-spa-gold/80 text-xs uppercase tracking-widest mb-2">
+                  {destination.treatmentCount}+ treatments
+                </div>
+                <h3 className="font-serif text-xl md:text-2xl text-white dark:text-foreground mb-2 group-hover:translate-y-0 transition-transform duration-300">
                   {destination.title}
                 </h3>
-                <p className="text-white/80 dark:text-muted-foreground text-sm mb-4 line-clamp-2">
+                <p className="text-white/70 dark:text-muted-foreground text-sm mb-3 line-clamp-2">
                   {destination.description}
                 </p>
                 <div className="flex items-center gap-2 text-spa-gold group-hover:gap-3 transition-all duration-300">
@@ -100,7 +174,7 @@ const BeautyDestinations = () => {
                 </div>
               </div>
               
-              {/* Soft glow on hover */}
+              {/* Hover glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
               </div>

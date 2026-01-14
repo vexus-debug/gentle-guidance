@@ -1,5 +1,58 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Award, Shield, Star, Users } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+
+const stats = [
+  { value: 2500, suffix: "+", label: "Happy Clients", icon: Users },
+  { value: 10000, suffix: "+", label: "Procedures", icon: Award },
+  { value: 4.9, suffix: "★", label: "Rating", icon: Star, isDecimal: true },
+];
+
+const certifications = [
+  { icon: Shield, label: "Licensed & Certified" },
+  { icon: Award, label: "Premium Products" },
+  { icon: Star, label: "5-Star Rated" },
+];
+
+const AnimatedCounter = ({ value, suffix, isDecimal = false }: { value: number; suffix: string; isDecimal?: boolean }) => {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          const duration = 2000;
+          const steps = 60;
+          const increment = value / steps;
+          let current = 0;
+          
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= value) {
+              setCount(value);
+              clearInterval(timer);
+            } else {
+              setCount(isDecimal ? Math.round(current * 10) / 10 : Math.floor(current));
+            }
+          }, duration / steps);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [value, hasAnimated, isDecimal]);
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {isDecimal ? count.toFixed(1) : count.toLocaleString()}{suffix}
+    </span>
+  );
+};
 
 const WelcomeEmbrace = () => {
   return (
@@ -26,10 +79,33 @@ const WelcomeEmbrace = () => {
             and every moment is crafted to nurture your radiance.
           </p>
           
-          <p className="text-base text-muted-foreground/80 leading-relaxed mb-12 max-w-2xl mx-auto">
-            Our world-class aestheticians blend artistry with science, creating experiences 
-            that honor your unique essence while revealing the luminous beauty within.
-          </p>
+          {/* Animated Stats Bar */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-10 py-8 px-6 rounded-3xl bg-gradient-to-r from-muted/50 via-card to-muted/50 border border-border/30 shadow-lg">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <stat.icon className="w-5 h-5 text-primary opacity-70 group-hover:scale-110 transition-transform duration-300" />
+                  <p className="text-3xl md:text-4xl font-serif text-secondary dark:text-foreground">
+                    <AnimatedCounter value={stat.value} suffix={stat.suffix} isDecimal={stat.isDecimal} />
+                  </p>
+                </div>
+                <p className="text-xs text-muted-foreground uppercase tracking-widest">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+          
+          {/* Trust Certifications Strip */}
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
+            {certifications.map((cert, index) => (
+              <div 
+                key={index} 
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 dark:bg-primary/10 border border-primary/20 hover:border-primary/40 transition-colors duration-300"
+              >
+                <cert.icon className="w-4 h-4 text-primary" />
+                <span className="text-xs text-muted-foreground font-medium">{cert.label}</span>
+              </div>
+            ))}
+          </div>
           
           <Link 
             to="/about" 
