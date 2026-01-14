@@ -3,11 +3,15 @@ import HeroSlideshow from "@/components/home/HeroSlideshow";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   WelcomeEmbrace,
+  BrandMarquee,
   BeautyDestinations,
   TransformationArt,
+  LifestyleImage,
   NurturingExpertise,
-  VoicesOfConfidence,
   MeetYourGuides,
+  TreatmentsIntro,
+  ServiceAccordions,
+  VoicesOfConfidence,
   CredentialsTrust,
   BeginJourney,
 } from "@/components/home/journey";
@@ -15,37 +19,60 @@ import {
 const Index = () => {
   return (
     <Layout>
+      {/* Hero - Unchanged */}
       <HeroSlideshow />
       
+      {/* Section 1: Welcome Introduction */}
       <ScrollReveal animation="fade-up">
         <WelcomeEmbrace />
       </ScrollReveal>
       
-      <ScrollReveal animation="fade-up" delay={100}>
+      {/* Section 2: Brand Partners Marquee */}
+      <BrandMarquee />
+      
+      {/* Section 3: Services Grid */}
+      <ScrollReveal animation="fade-up">
         <BeautyDestinations />
       </ScrollReveal>
       
+      {/* Section 4: Mission/About Dark Section */}
       <ScrollReveal animation="fade-up">
         <TransformationArt />
       </ScrollReveal>
       
-      <ScrollReveal animation="zoom-in">
+      {/* Section 5: Lifestyle Image */}
+      <LifestyleImage />
+      
+      {/* Section 6: Meet Our Founder */}
+      <ScrollReveal animation="fade-up">
         <NurturingExpertise />
       </ScrollReveal>
       
-      <ScrollReveal animation="fade-up" delay={100}>
-        <VoicesOfConfidence />
-      </ScrollReveal>
-      
+      {/* Section 7: Meet Our Team */}
       <ScrollReveal animation="fade-up">
         <MeetYourGuides />
       </ScrollReveal>
       
+      {/* Section 8: Treatments Intro Banner */}
+      <ScrollReveal animation="zoom-in">
+        <TreatmentsIntro />
+      </ScrollReveal>
+      
+      {/* Section 9: Service Accordions */}
+      <ServiceAccordions />
+      
+      {/* Section 10: Testimonials */}
+      <ScrollReveal animation="fade-up">
+        <VoicesOfConfidence />
+      </ScrollReveal>
+      
+      {/* Section 11: Credentials/Trust */}
       <ScrollReveal animation="fade-up">
         <CredentialsTrust />
       </ScrollReveal>
       
-      <ScrollReveal animation="zoom-in" delay={100}>
+      {/* Section 12: CTA - Begin Journey */}
+      <ScrollReveal animation="zoom-in">
         <BeginJourney />
       </ScrollReveal>
     </Layout>
