@@ -1,55 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, Clock } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { ArrowRight } from "lucide-react";
 import aboutImage from "@/assets/about-professional.jpg";
-
-const teamCredentials = [
-  "Board Certified",
-  "Advanced Training",
-  "International Experience",
-];
-
-const AnimatedCounter = ({ value, suffix = "", isDecimal = false }: { value: number; suffix?: string; isDecimal?: boolean }) => {
-  const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          const duration = 2000;
-          const steps = 60;
-          const increment = value / steps;
-          let current = 0;
-          
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= value) {
-              setCount(value);
-              clearInterval(timer);
-            } else {
-              setCount(isDecimal ? Math.round(current * 10) / 10 : Math.floor(current));
-            }
-          }, duration / steps);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [value, hasAnimated, isDecimal]);
-
-  return (
-    <div ref={ref}>
-      <span className="tabular-nums">
-        {isDecimal ? count.toFixed(1) : count.toLocaleString()}{suffix}
-      </span>
-    </div>
-  );
-};
 
 const MeetYourGuides = () => {
   return (
@@ -82,15 +33,6 @@ const MeetYourGuides = () => {
               <p className="text-4xl font-serif text-primary mb-1">50+</p>
               <p className="text-xs text-muted-foreground uppercase tracking-wider">Years Combined Experience</p>
             </div>
-            
-            {/* Credentials badge */}
-            <div className="absolute top-8 right-8 bg-card/95 dark:bg-card/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-xl hidden lg:flex flex-wrap gap-2 max-w-[180px] border dark:border-border/50">
-              {teamCredentials.map((cred, i) => (
-                <span key={i} className="text-[10px] px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                  {cred}
-                </span>
-              ))}
-            </div>
           </div>
           
           {/* Content */}
@@ -108,42 +50,27 @@ const MeetYourGuides = () => {
               medical precision with refined artistry.
             </p>
             
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               This distinguished collective of physicians, nurses, and licensed aesthetic providers 
               brings incredible mastery to advanced treatments. We craft comprehensive, personalized 
-              plans for your holistic well-being.
+              plans for your holistic well-being, ensuring your path to revitalized confidence is 
+              met with unparalleled grace.
             </p>
             
-            {/* Animated Stats */}
-            <div className="grid grid-cols-3 gap-4 mb-10 p-6 rounded-2xl bg-gradient-to-r from-muted/50 to-transparent border border-border/30">
-              <div className="text-center group">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Award className="w-5 h-5 text-primary opacity-70" />
-                  <p className="text-2xl md:text-3xl font-serif text-secondary dark:text-foreground">
-                    <AnimatedCounter value={10000} suffix="+" />
-                  </p>
-                </div>
-                <p className="text-xs text-muted-foreground">Procedures</p>
-              </div>
-              
-              <div className="text-center border-x border-border/50">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Users className="w-5 h-5 text-primary opacity-70" />
-                  <p className="text-2xl md:text-3xl font-serif text-secondary dark:text-foreground">
-                    <AnimatedCounter value={200} suffix="+" />
-                  </p>
-                </div>
-                <p className="text-xs text-muted-foreground">Monthly</p>
-              </div>
-              
+            <div className="flex flex-wrap gap-6 mb-10">
               <div className="text-center">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Clock className="w-5 h-5 text-spa-gold opacity-70" />
-                  <p className="text-2xl md:text-3xl font-serif text-secondary dark:text-foreground">
-                    <AnimatedCounter value={4.9} suffix="★" isDecimal />
-                  </p>
-                </div>
-                <p className="text-xs text-muted-foreground">Rating</p>
+                <p className="text-2xl font-serif text-secondary dark:text-foreground">10,000+</p>
+                <p className="text-xs text-muted-foreground">Procedures Performed</p>
+              </div>
+              <div className="w-px bg-border" />
+              <div className="text-center">
+                <p className="text-2xl font-serif text-secondary dark:text-foreground">200+</p>
+                <p className="text-xs text-muted-foreground">Treatments Monthly</p>
+              </div>
+              <div className="w-px bg-border" />
+              <div className="text-center">
+                <p className="text-2xl font-serif text-secondary dark:text-foreground">4.9★</p>
+                <p className="text-xs text-muted-foreground">Client Rating</p>
               </div>
             </div>
             
